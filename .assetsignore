@@ -1,0 +1,10 @@
+# Files in this list are excluded from the Cloudflare Workers static asset bundle.
+# Use the same syntax as .gitignore.
+
+HANDOFF.md
+README.md
+.gitignore
+.assetsignore
+wrangler.jsonc
+wrangler.toml
+.wrangler

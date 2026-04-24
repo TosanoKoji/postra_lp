@@ -2,7 +2,23 @@
 <html lang="ja"><head>
 <meta charset="utf-8">
 <title>Postra — 見つける、選ぶ、組む、届ける。</title>
-<meta name="description" content="Postra は Mac 用のフォト・キュレーション + 組写真レイアウトアプリ（Windows は後日対応）。10,000枚超のライブラリから、残す一枚を見つける。">
+<meta name="description" content="Postra は Mac 用のフォト・キュレーション + 組写真レイアウトアプリ（Windows 版も開発中）。10,000枚超のライブラリから、残す一枚を見つける。">
+
+<!-- Open Graph / Twitter Card — ドメイン・画像は暫定値、本番時に置換 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Postra">
+<meta property="og:title" content="Postra — 見つける、選ぶ、組む、届ける。">
+<meta property="og:description" content="Mac 用のフォト・キュレーション + 組写真レイアウトアプリ。10,000枚超のライブラリから、残す一枚を見つける。">
+<meta property="og:url" content="https://postra.app/">
+<meta property="og:image" content="https://postra.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Postra — 見つける、選ぶ、組む、届ける。">
+<meta name="twitter:description" content="Mac 用のフォト・キュレーション + 組写真レイアウトアプリ。10,000枚超のライブラリから、残す一枚を見つける。">
+<meta name="twitter:image" content="https://postra.app/assets/og-image.png">
+<meta name="theme-color" content="#0f1115">
 <link rel="icon" type="image/png" href="assets/app-icon.png">
 <link rel="apple-touch-icon" href="assets/app-icon.png">
 <link rel="stylesheet" href="./colors_and_type.css">
@@ -325,11 +341,19 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
 </header>
 
 <!-- ============ HERO ============ -->
+<!--
+  TODO [素材差替 / HANDOFF §1]:
+    Safari 風ウィンドウ内の app-mock を、実アプリのスクリーンショット or 短尺動画に差し替える。
+    推奨動画: 1600×1000（2倍: 3200×2000） / 6〜8秒 / 30fps / MP4 / 音声なし
+    推奨静止画: 3200×2000 PNG or JPEG（Retina 対応で2倍解像度、長辺 3200px）
+    配置先: assets/hero.png  または  assets/videos/hero.mp4 + hero-poster.jpg
+    注: ヒーローは「実写 + 実 UI」が最も信頼感を出す（ポートレート等を UI 内に映した状態）。
+-->
 <section class="hero reveal" data-screen-label="01-hero">
   <div class="hero-copy">
     <div class="eyebrow">
       <span class="pill"><span class="dot"></span>Mac</span>
-      <span>爆速フォトキュレーション + 組写真　　（※Windows は後日対応）</span>
+      <span>爆速フォトキュレーション + 組写真　　（※Windows 版も開発中）</span>
     </div>
     <h1 class="display">見つける、選ぶ、組む<br><span class="accent">届ける。</span></h1>
     <p class="lede" style="font-weight:700">ストレージに眠る <strong>数万枚</strong> の写真から、<strong>「あの1枚」</strong> を見つけに行く。<br>似ている写真を一瞬でまとめ、組写真を並べかえてみたり、そのまま編集して SNS や各種発信に投稿する直前まで — Postra は「写真再発見」のためのアプリです。</p>
@@ -464,6 +488,13 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
 </section>
 
 <!-- ============ SECTION 2: AI ============ -->
+<!--
+  TODO [素材差替 / HANDOFF §3]:
+    AI 類似検索 (MEANING / VISUAL / RANDOM) のモックを実 UI の画面録画に差し替える。
+    推奨（3本分割版、推奨）: 各 800×600 / 各 3〜4秒 / 30fps / MP4 / 音声なし
+    あるいは 1本版: 1600×900 / 10〜12秒
+    配置先: assets/videos/ai-meaning.mp4, ai-visual.mp4, ai-random.mp4 （+ それぞれのポスター）
+-->
 <section id="ai" class="reveal" data-screen-label="03-ai">
   <div class="container">
     <div class="section-head">
@@ -530,6 +561,12 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
 </section>
 
 <!-- ============ SECTION 3: Compose ============ -->
+<!--
+  TODO [素材差替 / HANDOFF §4]:
+    デュアル A/B レイアウトのモックを実 UI の画面録画に差し替える。
+    推奨: 1600×1000（2倍: 3200×2000） / 6〜8秒 / 30fps / MP4 (H.264) / 音声なし / 500KB〜1.5MB
+    配置先: assets/videos/compose.mp4 + compose-poster.jpg
+-->
 <section id="compose" class="reveal" data-screen-label="04-compose">
   <div class="container">
     <div class="section-head">
@@ -573,6 +610,14 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
 </section>
 
 <!-- ============ SECTION 4: Retouch ============ -->
+<!--
+  TODO [素材差替 ★最優先★ / HANDOFF §5]:
+    Before/After スライダーのモックを実 UI の画面録画に差し替える。
+    現状のモックは実アプリと見た目が異なる = "嘘" になるので最優先。
+    推奨: 1600×1000（2倍: 3200×2000） / 8〜10秒 / 30fps / MP4 (H.264) / 音声なし / 500KB〜1.5MB
+    配置先: assets/videos/retouch.mp4 + retouch-poster.jpg
+    差込コード: <video autoplay loop muted playsinline poster="..." ><source src="..."></video>
+-->
 <section class="reveal" data-screen-label="05-retouch">
   <div class="container">
     <div class="section-head">
@@ -616,6 +661,12 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
 </section>
 
 <!-- ============ SECTION 5: Speed ============ -->
+<!--
+  TODO [素材差替 / HANDOFF §6]:
+    爆速スクロールのモックを実 UI の画面録画に差し替える。
+    推奨: 1600×900 / 4〜6秒 / 30fps / MP4 (H.264) / 音声なし / 500KB〜1.5MB
+    配置先: assets/videos/speed.mp4 + speed-poster.jpg
+-->
 <section id="speed" class="reveal" data-screen-label="06-speed">
   <div class="container">
     <div class="section-head">
@@ -665,7 +716,7 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
     <div class="section-head">
       <div class="section-label">06 · 動作環境</div>
       <h2>Mac で、そのまま動く。</h2>
-      <p class="section-lede">まずは Mac 用アプリとしてリリース。Windows 版は安定後に同じ機能で開発予定。Apple Silicon でも Intel でも、ネット接続は不要（初期設定やアップデート確認を除く）。</p>
+      <p class="section-lede">まずは Mac 用アプリとしてリリース。Windows 版は現在、並行して開発中です（近日対応予定）。Apple Silicon でも Intel でも、ネット接続は不要（初期設定やアップデート確認を除く）。</p>
     </div>
     <div class="sys">
       <div class="sys-card">
@@ -685,7 +736,7 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
     </div>
     <div class="sys-note">
       <span class="b">Windows 版:</span>
-      <span>後日対応予定。Mac 版の安定後に、同じ機能で開発します。</span>
+      <span>現在、並行して開発中。近日対応予定。</span>
     </div>
   </div>
 </section>
@@ -709,7 +760,8 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
           <li><span class="m">✓</span><span>以降もそのバージョンを永続利用可</span></li>
         </ul>
         <div class="price-cta">
-          <a class="btn btn-primary" href="#" style="width:100%;justify-content:center;padding:14px">今すぐ購入（Paddle で決済）</a>
+          <!-- Paddle Checkout: 本番時に href を Paddle の checkout URL、または data-paddle-product="<Product ID>" + Paddle.js 初期化に差し替え -->
+          <a class="btn btn-primary paddle-buy" href="#" data-paddle-product="postra-mac-v1" style="width:100%;justify-content:center;padding:14px">今すぐ購入（Paddle で決済）</a>
         </div>
         <div class="price-foot">支払い方法: クレジットカード / Apple Pay / Google Pay / 銀行振込 <br>VAT / 消費税込・領収書発行可・macOS 12 以降 · Apple Silicon / Intel</div>
       </div>
@@ -731,7 +783,7 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
       </details>
       <details class="faq-item">
         <summary>Windows 版はありますか？</summary>
-        <p>現在は Mac 版のみですが、Windows は後日対応予定です。Mac 版の安定後に、同じ機能で開発します。</p>
+        <p>現在は Mac 版を優先リリースしていますが、Windows 版も並行して開発中です（近日対応予定）。同じ機能セットを目標に開発しています。</p>
       </details>
       <details class="faq-item">
         <summary>RAW の現像はどの程度できますか？</summary>
@@ -772,7 +824,7 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
   <div class="foot">
     <div>
       <div class="brand"><img src="assets/logo-lockup-light.png" alt="Postra"></div>
-      <div class="desc" style="margin-top:14px">写真を選び、組み、届けるための Mac 用アプリ（Windows は後日対応）。</div>
+      <div class="desc" style="margin-top:14px">写真を選び、組み、届けるための Mac 用アプリ（Windows 版も開発中）。</div>
     </div>
     <div class="cols">
       <div class="col">
@@ -800,7 +852,7 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
   </div>
   <div class="foot-bottom">
     <span>© 2026 Postra</span>
-    <span class="mono">v1.1 · for Mac (Windows 後日) · Paddle</span>
+    <span class="mono">v1.1 · for Mac (Windows 開発中) · Paddle</span>
   </div>
 </footer>
 

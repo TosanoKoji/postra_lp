@@ -2,6 +2,9 @@
 
 Postra（Mac 用フォト・キュレーション + 組写真レイアウトアプリ）の公式ランディングページ。
 
+**公開 URL（暫定）**: https://postra-lp.tosano-koji-0217.workers.dev/
+（独自ドメイン取得後に差し替え予定）
+
 ## 構成
 
 - `index.html` — LP 本体（単一ファイル、CSS/JS インライン）
@@ -19,11 +22,11 @@ python3 -m http.server 8000
 
 または VS Code の Live Server 拡張などでも OK。
 
-## デプロイ想定
+## デプロイ
 
-- Cloudflare Pages または GitHub Pages（静的ホスティング）
-- ビルド不要（`index.html` をそのまま配信）
-- ドメインは未定（`postra.app` / `postra.jp` / `getpostra.com` など検討中）
+- **Cloudflare Workers + Static Assets**（GitHub 連携、main への push で自動デプロイ）
+- 設定: `wrangler.jsonc`（assets directory = `./`、ドキュメント類は `.assetsignore` で除外）
+- ドメインは未定（`postra.app` / `postra.jp` / `getpostra.com` など検討中）→ 取得後に Cloudflare ダッシュボードでカスタムドメインを紐付け
 
 ## 残タスク（優先順）
 

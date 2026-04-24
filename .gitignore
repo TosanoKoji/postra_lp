@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (for future build tooling, e.g. Wrangler CLI)
+node_modules/
+npm-debug.log*
+.env
+.env.local
+
+# Claude Code
+.claude/
+
+# Backup files
+*BU.html
+*BU.css
+indexcurrent.html

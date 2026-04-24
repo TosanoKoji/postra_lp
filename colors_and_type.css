@@ -1,0 +1,216 @@
+/* =============================================================
+   Postra — Colors & Type
+   Single source of truth for the Postra design system.
+   Mirrors :root in src/index.html and fills in display/landing
+   tokens used outside the app shell.
+   ============================================================= */
+
+:root {
+  /* -- Core surface & text (from src/index.html :root) --------- */
+  --bg:        #0f1115;   /* page background (landing) */
+  --bg-app:    #101113;   /* app canvas background */
+  --panel:     #181a1d;   /* toolbars, sidebars, footers */
+  --card:      #1b1e24;   /* cards, modals, feature tiles */
+  --card-2:    #14171b;   /* inset cards inside side panel */
+  --well:      #15181b;   /* darker well (fav box, root recents) */
+  --line:      #2a2d31;   /* 1px dividers */
+  --line-soft: rgba(255,255,255,.07);
+  --line-hair: rgba(255,255,255,.04);
+
+  /* -- Foreground tiers --------------------------------------- */
+  --fg:        #eef0f2;   /* primary text */
+  --fg-2:      #e8edf2;   /* modal / card headings */
+  --fg-3:      #cfd5dc;   /* body in modals */
+  --fg-4:      #c5cbd3;   /* guide lines */
+  --fg-5:      #9fb8d6;   /* label copy */
+  --muted:     #8f959d;   /* secondary labels */
+  --muted-2:   #8a929e;   /* modal sub-labels */
+  --muted-3:   #5a6270;   /* captions, footnotes */
+  --muted-4:   #3a4250;   /* placeholders */
+
+  /* -- Accent (single hue, used sparingly) -------------------- */
+  --accent:        #57a8ff;
+  --accent-fg:     #cfe4ff; /* text on accent-tinted surfaces */
+  --accent-weak:   rgba(87,168,255,.08);
+  --accent-soft:   rgba(87,168,255,.12);
+  --accent-mid:    rgba(87,168,255,.22);
+  --accent-strong: rgba(87,168,255,.32);
+  --accent-border: rgba(87,168,255,.28);
+  --accent-border-2: rgba(87,168,255,.45);
+  --accent-border-3: rgba(87,168,255,.6);
+  --accent-glow:   rgba(87,168,255,.18);
+
+  /* -- Brand gradient (logo / rare CTA accents) --------------- */
+  --brand-cyan:   #3dd7ff;
+  --brand-blue:   #57a8ff;
+  --brand-purple: #8b5cf6;
+  --brand-pink:   #ff5ea8;
+  --brand-gradient:
+    linear-gradient(135deg, #3dd7ff 0%, #57a8ff 28%, #8b5cf6 62%, #ff5ea8 100%);
+  --brand-gradient-line:
+    linear-gradient(90deg, #3dd7ff 0%, #57a8ff 28%, #8b5cf6 62%, #ff5ea8 100%);
+
+  /* -- Thumb & slot (photo surfaces) -------------------------- */
+  --thumb:       #17191c;
+  --thumb-hover: #20242a;
+  --thumb-sel:   #213446;
+  --slot:        #202327;
+  --slot-over:   #2b3440;
+
+  /* -- Semantic state ----------------------------------------- */
+  --pick:   #9fe2a4;        /* 👍 picked / ok */
+  --reject: #ffb4b4;        /* ❌ rejected */
+  --warn:   #c89f4a;
+  --ok:     #4ade80;        /* CLIP embed progress */
+  --ok-2:   #5eff7a;        /* cache hit badge */
+  --pause:  #facc15;        /* paused embed */
+  --danger: #ef4444;
+
+  /* -- Control surfaces (inputs, secondary buttons) ----------- */
+  --ctl-bg:       #22262b;
+  --ctl-bg-hover: #292e35;
+  --ctl-bg-press: #2b3138;
+  --ctl-border:   #343941;
+  --ctl-fg:       #e8ebef;
+
+  /* -- Radii (px) --------------------------------------------- */
+  --r-xs: 4px;   /* badges, tiny chips */
+  --r-sm: 6px;   /* modal buttons, small inputs */
+  --r-md: 8px;   /* rows, selects */
+  --r-lg: 10px;  /* primary controls, modal body */
+  --r-xl: 14px;  /* cards, thumbs */
+  --r-2xl: 18px; /* feature cards, preview stage */
+  --r-pill: 999px;
+
+  /* -- Spacing (tight; app is dense) --------------------------- */
+  --s-1: 2px;
+  --s-2: 4px;
+  --s-3: 6px;
+  --s-4: 8px;
+  --s-5: 10px;
+  --s-6: 12px;
+  --s-7: 16px;
+  --s-8: 20px;
+  --s-9: 24px;
+  --s-10: 32px;
+  --s-11: 48px;
+  --s-12: 64px;
+  --s-13: 96px;
+
+  /* -- Shadows ------------------------------------------------ */
+  --shadow-xs:  0 2px 2px rgba(0,0,0,.2);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,.28);
+  --shadow-md:  0 4px 14px rgba(0,0,0,.28);
+  --shadow-lg:  0 12px 48px rgba(0,0,0,.5);
+  --shadow-xl:  0 16px 48px rgba(0,0,0,.5);
+  --shadow-2xl: 0 22px 54px rgba(0,0,0,.48);
+
+  /* -- Motion ------------------------------------------------- */
+  --dur-fast: .12s;
+  --dur-med:  .18s;
+  --dur-slow: .24s;
+  --ease:     ease;
+
+  /* =========================================================
+     Typography
+     App uses system sans stack; Japanese falls back to OS
+     Hiragino. Landing adds Noto Sans JP for non-mac viewers.
+     ========================================================= */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Yu Gothic Medium", "Meiryo",
+    sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Roboto Mono", monospace;
+
+  /* Display / landing sizes (photographer tone: generous, quiet) */
+  --fs-display: clamp(44px, 6vw, 88px);
+  --fs-h1:      clamp(32px, 4vw, 56px);
+  --fs-h2:      clamp(24px, 2.6vw, 36px);
+  --fs-h3:      22px;
+  --fs-lead:    18px;
+  --fs-body:    15px;
+
+  /* App sizes (dense — numbers are what ships in the shell) */
+  --fs-app-xxs: 9px;   /* cache badges, tiny metadata */
+  --fs-app-xs:  10px;  /* chips, slot index, amount values */
+  --fs-app-sm:  11px;  /* guide lines, meta-pills */
+  --fs-app-md:  12px;  /* default small UI */
+  --fs-app-bd:  13px;  /* tree rows, card subtitles */
+  --fs-app-h:   14px;  /* modal h3 */
+  --fs-app-bar: 16px;  /* toolbar buttons (icon) */
+
+  --lh-tight: 1.2;
+  --lh-norm:  1.45;
+  --lh-read:  1.65;
+
+  /* Tabular numerals — used *everywhere* numbers show up */
+  --numeric: tabular-nums;
+}
+
+/* =============================================================
+   Semantic elements — landing / marketing surfaces
+   Keep app shell styles inline in the app; this block is for
+   pages built against the design system.
+   ============================================================= */
+
+html { color-scheme: dark; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-norm);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "palt" 1; /* proportional alternates for JP */
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: var(--lh-tight);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-h2); letter-spacing: -0.015em; }
+h3 { font-size: var(--fs-h3); }
+
+.display { font-size: var(--fs-display); letter-spacing: -0.025em; font-weight: 600; }
+.lead    { font-size: var(--fs-lead); color: var(--fg-3); }
+.mono    { font-family: var(--font-mono); font-variant-numeric: var(--numeric); }
+.muted   { color: var(--muted); }
+
+/* Label: the small caps-adjacent label above a value, as seen
+   throughout the app (`.label`, `.small`). */
+.label {
+  font-size: var(--fs-app-md);
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.caption {
+  font-size: var(--fs-app-sm);
+  color: var(--muted-3);
+  line-height: var(--lh-read);
+}
+
+/* The gradient accent — use on ONE thing per screen. Never
+   flood a page with it. */
+.gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.gradient-rule {
+  height: 1px;
+  border: 0;
+  background: var(--brand-gradient-line);
+  opacity: .75;
+}

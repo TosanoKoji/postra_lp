@@ -318,6 +318,37 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
   .stats-strip,.sys{grid-template-columns:1fr 1fr}
   .re-panel{width:160px}
 }
+
+/* Phone-sized screens. The 960px rule was tablet-aimed and left the
+   .container with its 28px side padding, so on a 375px iPhone the
+   actual text column was only ~319px wide and body copy wrapped after
+   roughly half the obvious horizontal space. Tighten the gutters and
+   let lines run as long as the device allows; only the bold display
+   headlines stay tight via text-wrap:balance which is already on h1/h2. */
+@media (max-width:640px){
+  .container{padding:0 16px}
+  .hero{padding:48px 16px 36px}
+  h1.display{font-size:36px;line-height:1.18}
+  h2{font-size:26px}
+  .lede,.section-lede{font-size:16px;line-height:1.85;max-width:none}
+  section{padding:64px 0}
+  .section-head{margin-bottom:48px}
+  /* Nav: hide the inline section links (room is too tight for them to
+     read well) and the "v1.1 · for Mac" meta tag; keep brand + CTA. */
+  .nav-inner{padding:14px 16px;gap:12px}
+  .nav-links{display:none}
+  .nav-cta .meta{display:none}
+  .nav-cta .btn-primary{padding:9px 16px;font-size:13px}
+  /* Stat strip and system grid go single-column on phones — two columns
+     squeezed numbers and labels into the same line otherwise. */
+  .stats-strip,.sys{grid-template-columns:1fr;gap:20px}
+  /* Eyebrow pill and sub-meta below hero CTA stay readable. */
+  .eyebrow{font-size:11px}
+  .sub-meta{font-size:12px}
+  .price-card .p .n{font-size:48px}
+  /* Footer columns stack instead of three side-by-side. */
+  .foot,.foot .cols{grid-template-columns:1fr;gap:32px}
+}
 </style>
 </head>
 <body>

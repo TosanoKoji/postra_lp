@@ -56,6 +56,14 @@ img{display:block;max-width:100%}
 .container{max-width:1180px;margin:0 auto;padding:0 28px}
 section{padding:120px 0;border-top:1px solid var(--line)}
 section:first-of-type{border-top:none}
+/* Section rhythm tweaks. The default 120px is fine in the middle of
+   the page; punch up the breathing room around the hero handoff and
+   the pricing-card setup, and pull FAQ closer in so the page doesn't
+   feel like it has another full chapter to grind through before the
+   final CTA. */
+[data-screen-label="02-problem"]{padding-top:160px}
+[data-screen-label="08-pricing"]{padding-top:160px}
+[data-screen-label="09-faq"]{padding-top:96px;padding-bottom:96px}
 .section-head{margin-bottom:72px;max-width:760px}
 .section-label{font-size:11.5px;color:var(--muted-2);letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-family:ui-monospace,monospace}
 .section-label::before{content:"— "}

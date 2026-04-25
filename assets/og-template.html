@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Postra — OG Image Template</title>
+<style>
+  /* Render this page at exactly 1200×630 in the browser, then take a
+     full-window screenshot and save it as `assets/og-image.png`.
+     Recommended: open the file in Chrome → DevTools → toggle device
+     toolbar → set custom dimensions to 1200×630 → screenshot from the
+     three-dot menu. */
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #0f1115;
+    color: #eef0f2;
+    font-family: "Hiragino Sans","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "palt" 1;
+  }
+
+  .stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 80px;
+    box-sizing: border-box;
+  }
+
+  /* Soft accent glow in the upper right corner — same gradient family
+     as the live LP. */
+  .stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(60% 80% at 90% 10%, rgba(87,168,255,0.18), transparent 60%),
+      radial-gradient(40% 60% at 10% 100%, rgba(164,123,255,0.10), transparent 60%);
+    pointer-events: none;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+  .brand img {
+    height: 64px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 4px 16px rgba(138, 110, 255, 0.35));
+  }
+
+  h1 {
+    margin: 0 0 24px;
+    font-size: 92px;
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+    font-weight: 700;
+    text-wrap: balance;
+    max-width: 900px;
+  }
+  .accent {
+    background: linear-gradient(135deg, #35d4ff 0%, #57a8ff 35%, #a47bff 70%, #ff6ec4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  p.lede {
+    margin: 0 0 0;
+    font-size: 26px;
+    line-height: 1.6;
+    color: #c9cdd2;
+    max-width: 880px;
+    font-weight: 500;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 56px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #9aa1aa;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+  }
+  .footer .platform {
+    color: #cfe4ff;
+    font-weight: 600;
+  }
+  .footer .url {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-feature-settings: "tnum" 1;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="brand">
+      <img src="logo-lockup-light.png" alt="Postra">
+    </div>
+    <h1>見つける、選ぶ、組む<span class="accent">、届ける。</span></h1>
+    <p class="lede">Mac 用のフォト・キュレーション + 組写真レイアウト。<br>10,000 枚超のライブラリから、残す一枚を見つける。</p>
+    <div class="footer">
+      <span class="platform">for Mac &nbsp;·&nbsp; Windows 版 開発中</span>
+      <span class="url">postra.app</span>
+    </div>
+  </div>
+</body>
+</html>

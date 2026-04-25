@@ -72,13 +72,18 @@ h2{font-size:44px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:
 
 /* ---------- Hero ---------- */
 .hero{padding:96px 28px 90px;max-width:1180px;margin:0 auto;border-top:none}
-.hero-copy{max-width:880px}
+.hero-copy{max-width:920px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px;padding:5px 11px 5px 5px;border:1px solid var(--line-2);border-radius:999px;background:rgba(255,255,255,.02)}
 .eyebrow .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;background:rgba(87,168,255,.12);color:#cfe4ff;font-weight:600}
 .eyebrow .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(87,168,255,.7)}
 h1.display{font-size:72px;line-height:1.1;letter-spacing:-.015em;font-weight:700;margin:0 0 30px;color:var(--fg);text-wrap:balance}
 h1.display .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lede{font-size:19px;line-height:1.8;color:var(--muted);max-width:680px;margin:0 0 40px}
+/* Hero lede width is intentionally wide (was 680px) so the author-
+   placed <br>s in the copy decide the line breaks rather than the
+   browser auto-wrapping mid-sentence. The phone breakpoint at 640px
+   below re-hides those <br>s and falls back to natural wrapping so
+   the lines don't end up awkwardly short on small screens. */
+.lede{font-size:19px;line-height:1.8;color:var(--muted);max-width:920px;margin:0 0 40px}
 .lede strong{color:var(--fg-2);font-weight:500}
 .hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .sub-meta{font-size:13px;color:var(--muted-2);display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:24px}
@@ -339,6 +344,11 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
   h1.display{font-size:36px;line-height:1.18}
   h2{font-size:26px}
   .lede,.section-lede{font-size:16px;line-height:1.85;max-width:none}
+  /* Hide author-placed <br>s in hero lede on phones — they were positioned
+     for the wider desktop measure; on a 375px screen they'd produce
+     dangling short lines. Browser auto-wrap handles the narrow width
+     better here. */
+  .lede br{display:none}
   section{padding:64px 0}
   .section-head{margin-bottom:48px}
   /* Nav: hide the inline section links (room is too tight for them to
@@ -395,7 +405,7 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
       <span>爆速フォトキュレーション + 組写真　　（※Windows 版も開発中）</span>
     </div>
     <h1 class="display">見つける、選ぶ、組む<br><span class="accent">届ける。</span></h1>
-    <p class="lede" style="font-weight:700">ストレージに眠る <strong>数万枚</strong> の写真から、<strong>「あの1枚」</strong> を見つけに行く。<br>似ている写真を一瞬でまとめ、組写真を並べかえてみたり、そのまま編集して SNS や各種発信に投稿する直前まで — Postra は「写真再発見」のためのアプリです。</p>
+    <p class="lede" style="font-weight:700">ストレージに眠る <strong>数万枚</strong> の写真から、<strong>「あの1枚」</strong> を見つけに行く。<br>似ている写真を一瞬でまとめ、組写真を並べかえてみたり、そのまま編集して SNS や各種発信に投稿する直前まで —<br>Postra は「写真再発見」のためのアプリです。</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#pricing">今すぐ購入</a>
       <a class="btn" href="#features">できること →</a>

@@ -68,7 +68,12 @@ section:first-of-type{border-top:none}
 .section-label{font-size:11.5px;color:var(--muted-2);letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-family:ui-monospace,monospace}
 .section-label::before{content:"— "}
 h2{font-size:44px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:0 0 22px;color:var(--fg);text-wrap:balance}
-.section-lede{font-size:17px;color:var(--muted);line-height:1.8;margin:0;max-width:640px;text-wrap:pretty}
+/* Section ledes used to be capped at 640px so any sentence longer than
+   ~30 characters wrapped mid-clause. Widening to 920px (matching the
+   hero) lets author-placed <br>s in the markup decide where lines
+   break, with text-wrap:pretty as the fallback for paragraphs that
+   don't have explicit breaks. */
+.section-lede{font-size:17px;color:var(--muted);line-height:1.8;margin:0;max-width:920px;text-wrap:pretty}
 
 /* ---------- Hero ---------- */
 .hero{padding:96px 28px 90px;max-width:1180px;margin:0 auto;border-top:none}
@@ -344,11 +349,11 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
   h1.display{font-size:36px;line-height:1.18}
   h2{font-size:26px}
   .lede,.section-lede{font-size:16px;line-height:1.85;max-width:none}
-  /* Hide author-placed <br>s in hero lede on phones — they were positioned
-     for the wider desktop measure; on a 375px screen they'd produce
-     dangling short lines. Browser auto-wrap handles the narrow width
-     better here. */
-  .lede br{display:none}
+  /* Hide author-placed <br>s in hero lede AND section ledes on phones —
+     they were positioned for the wider desktop measure; on a 375px
+     screen they'd produce dangling short lines. Browser auto-wrap
+     handles the narrow width better here. */
+  .lede br,.section-lede br{display:none}
   section{padding:64px 0}
   .section-head{margin-bottom:48px}
   /* Nav: hide the inline section links (room is too tight for them to
@@ -621,7 +626,7 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
     <div class="section-head">
       <div class="section-label">03 · デュアル A/B レイアウト</div>
       <h2>3枚、4枚、自由なレイアウト。<br>迷ったら、両方組んでみる。</h2>
-      <p class="section-lede">右パネルは2つに分割も可能、同じ素材または別の素材で別レイアウトを並行して組むことも。並べて見比べて、残す方を書き出す。<br>SNS 用の 1:1 / 4:5 / 16:9 / 9:16 すべてに対応。変更もプリセット保存も自由に。</p>
+      <p class="section-lede">右パネルは2つに分割も可能、同じ素材または別の素材で別レイアウトを並行して組むことも。<br>並べて見比べて、残す方を書き出す。<br>SNS 用の 1:1 / 4:5 / 16:9 / 9:16 すべてに対応。<br>変更もプリセット保存も自由に。</p>
     </div>
 
     <div class="ab">

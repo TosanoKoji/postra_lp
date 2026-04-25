@@ -817,6 +817,10 @@ Postra は、そこに楽しみを見つけるためのアプリです。</p>
         <p>現在は Mac 版を優先リリースしていますが、Windows 版も並行して開発中です（近日対応予定）。同じ機能セットを目標に開発しています。</p>
       </details>
       <details class="faq-item">
+        <summary>初回起動時に「開発元を確認できません」や「PC が保護されました」と警告が出ます。</summary>
+        <p>OS 標準のセキュリティ機構による警告で、Postra のインストーラに <strong>コードサイニング証明書</strong> が付与されていないために表示されます。Postra そのものに問題があるわけではありません（証明書は年額の運用コストがかかるため、初期リリース段階では取得を見送っています。販売実績に応じて将来的に導入予定です）。<br><br><strong>Mac の場合（Gatekeeper）:</strong> ダウンロードした DMG / アプリを <strong>右クリック → 「開く」</strong> → 確認ダイアログで再度 「開く」を選択。<br><br><strong>Windows の場合（SmartScreen）:</strong> 警告画面の <strong>「詳細情報」をクリック → 「実行」</strong>。<br><br>いずれも初回起動時のみで、一度許可すれば以降は警告なしで起動できます。</p>
+      </details>
+      <details class="faq-item">
         <summary>RAW の現像はどの程度できますか？</summary>
         <p>RAW現像は全く想定していません。<br>Postra は RAW埋め込みJPEG プレビューで軽快に表示可能（画質はカメラ依存）です。<br>現像作業は Lightroom / Capture One / RawTherapee など、お好みのソフトに渡してください。現像したものを取り込むのがベストな運用です。</p>
       </details>

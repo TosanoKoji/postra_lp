@@ -16,6 +16,9 @@ npm-debug.log*
 .env
 .env.local
 
+# Wrangler (Cloudflare Workers) local cache
+.wrangler/
+
 # Claude Code
 .claude/
 

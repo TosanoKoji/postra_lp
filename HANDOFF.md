@@ -12,7 +12,7 @@
 
 - **プロダクト性格**: 「写真再発見」がキーメッセージ。ストレージに眠る数万枚から「あの1枚」を見つけるためのアプリ。
 - **価格**: 買い切り ¥5,800（Paddle 決済想定）
-- **対象**: Mac（Apple Silicon / Intel、macOS 12 以降）。Windows 版は後日対応予定。
+- **対象**: Mac（Apple Silicon (M1+)、macOS 12 Monterey 以降）。Intel Mac は非対応。Windows 版は v1.1 リリースの判断で凍結中（`feat/windows-cuda` ブランチおよび `windows-cuda-frozen-2026-04-30` タグで保全。再開時は `WINDOWS_FREEZE.md` 参照）。
 - **競合関係**: Lightroom / Capture One とは**競合せず併用を想定**。Postra は JPG 撮って出し or 現像済みの管理・選別・組写真・簡易編集・書き出しに特化。RAW は埋め込み JPEG プレビューで閲覧可（現像はしない）。
 
 ---

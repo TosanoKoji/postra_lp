@@ -38,7 +38,6 @@ python3 -m http.server 8000
 4. Paddle Checkout 実リンク埋込（現状 `href="#"`）
 5. OGP 画像・favicon の整備
 6. モバイル表示検証（375px 付近）
-7. Windows 版リリース時に `後日対応予定` 表記を更新
 
 ## 方針
 

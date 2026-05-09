@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Privacy Policy — Postra</title>
+<meta name="description" content="Scope and purpose of personal information handled by Postra, and our safeguards.">
+<link rel="alternate" hreflang="ja" href="https://postra.link/privacy.html?lang=ja">
+<link rel="alternate" hreflang="en" href="https://postra.link/privacy.html?lang=en">
+<link rel="icon" type="image/png" href="assets/app-icon.png">
+<link rel="apple-touch-icon" href="assets/app-icon.png">
+<meta name="theme-color" content="#0f1115">
+<style>
+:root{
+  --bg:#0f1115;--panel:#1b1e24;--card:#1b1e24;
+  --line:rgba(255,255,255,.06);--line-2:rgba(255,255,255,.1);
+  --fg:#eef0f2;--fg-2:#c9cdd2;--muted:#9aa1aa;--muted-2:#6e747c;
+  --accent:#57a8ff;
+  --grad:linear-gradient(135deg,#35d4ff 0%,#57a8ff 35%,#a47bff 70%,#ff6ec4 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Hiragino Sans","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1}
+a{color:#9fd0ff;text-decoration:none;border-bottom:1px solid rgba(159,208,255,.3)}
+a:hover{color:#cfe4ff;border-bottom-color:rgba(207,228,255,.6)}
+
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(140%) blur(14px);background:rgba(15,17,21,.72);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:880px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;height:30px}
+.brand img{height:100%;width:auto;display:block}
+.back-link{font-size:13.5px;color:var(--muted);border:none}
+.back-link.to-app{margin-left:auto}
+.back-link:hover{color:var(--fg)}
+
+main{max-width:880px;margin:0 auto;padding:80px 28px 120px}
+h1{font-size:40px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:0 0 12px;color:var(--fg);text-wrap:balance}
+.lede{font-size:15px;color:var(--muted);margin:0 0 56px}
+.lede .updated{display:inline-block;padding:4px 10px;border:1px solid var(--line-2);border-radius:999px;font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.04em;color:var(--muted-2)}
+
+article h2{font-size:22px;line-height:1.4;font-weight:700;margin:48px 0 16px;color:var(--fg);padding-top:24px;border-top:1px solid var(--line)}
+article h2:first-of-type{padding-top:0;border-top:none;margin-top:0}
+article p{margin:0 0 14px;color:var(--fg-2)}
+article ul{margin:8px 0 14px;padding-left:1.4em;color:var(--fg-2)}
+article ul li{margin:4px 0}
+article strong{color:var(--fg);font-weight:600}
+
+.foot{max-width:880px;margin:0 auto;padding:24px 28px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);font-size:13px;color:var(--muted-2)}
+.foot a{color:var(--muted);border:none}
+.foot a:hover{color:var(--fg)}
+
+@media (max-width:640px){
+  .nav-inner{padding:14px 16px}
+  main{padding:48px 16px 72px}
+  h1{font-size:30px}
+  article h2{font-size:18px;margin-top:36px}
+  .foot{padding:20px 16px 40px;flex-direction:column;gap:10px;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="./" class="brand" aria-label="Postra"><img src="assets/logo-lockup-light.png" alt="Postra"></a>
+    <a href="?lang=ja" class="back-link to-app" hreflang="ja" lang="ja">日本語</a>
+    <a href="./" class="back-link">← Back to Postra</a>
+  </div>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="lede"><span class="updated">Last updated: 2026-05-03</span></p>
+
+  <article>
+    <h2>Article 1. Introduction</h2>
+    <p>The developer of Postra (hereinafter, "we" or "us"; the application is referred to as "the App") sets out below the privacy policy ("this Policy") regarding the handling of personal information of users (hereinafter, "you" or "users") of the App and this website (collectively, "the Service"). For information about the responsible operator, please refer to the Japanese Act on Specified Commercial Transactions notice (Tokushoho).</p>
+
+    <h2>Article 2. Handling of Information in the App (Important)</h2>
+    <p>The App is <strong>designed to operate fully on your device</strong>. The following categories of information are not transmitted to any third-party servers, including ours:</p>
+    <ul>
+      <li>The photo files you open in the App, their thumbnails, and their metadata</li>
+      <li>Results of similarity search, keyword search, retouch, and composite layout</li>
+      <li>The contents of any files created within the App</li>
+    </ul>
+    <p>All such processing runs locally on your device, and the App is not designed to transmit this data externally.</p>
+
+    <h2>Article 3. Cases Where Network Communication Occurs</h2>
+    <p>The App operates offline by default, and only communicates with external servers in the following limited cases:</p>
+    <ul>
+      <li><strong>AI model download on first launch:</strong> To enable similarity search (CLIP / DINOv2), the App downloads model files from a model-distribution server operated by Hugging Face. The information transmitted is limited to standard HTTP headers (IP address, User-Agent, etc.) associated with the file request; your photos are never transmitted.</li>
+      <li><strong>Update checks:</strong> The App may transmit the current version information to an update-check server we operate.</li>
+      <li><strong>Purchase verification:</strong> The App is sold through the Mac App Store. Purchase verification and license management are handled by Apple's Mac App Store / App Store systems; we do not operate a separate license server, and no photos or personal information are transmitted to a server we operate for this purpose.</li>
+    </ul>
+    <p>In none of these communications are your photos or photo-related metadata transmitted.</p>
+
+    <h2>Article 4. Information We Collect</h2>
+    <p>In providing the Service, we may collect the following information:</p>
+    <ul>
+      <li><strong>Payment information at purchase:</strong> Because the App is sold through the Mac App Store, purchase processing and payment-information handling are performed by Apple Inc. (or, for customers in Japan, iTunes K.K.). <strong>We do not directly collect or retain</strong> your name, email address, credit card information, billing address, or similar details. From Apple, we receive only aggregated reports such as sales counts by region.</li>
+      <li><strong>Website access information:</strong> As logs from hosting / CDN services such as Cloudflare, we may record IP address, User-Agent, referrer URL, access timestamps, and similar.</li>
+      <li><strong>Information from inquiries:</strong> If you contact us via an inquiry form or email, the body of the message, your name, email address, attachments, and similar.</li>
+    </ul>
+
+    <h2>Article 5. Purpose of Use</h2>
+    <p>We use the collected information solely for the following purposes:</p>
+    <ul>
+      <li>Providing, maintaining, and operating the Service</li>
+      <li>Purchase processing and license management</li>
+      <li>Responding to inquiries from users</li>
+      <li>Investigating and addressing unauthorized access, misuse, or violations</li>
+      <li>Analyzing and improving usage of the Service</li>
+    </ul>
+
+    <h2>Article 6. Provision to Third Parties</h2>
+    <p>Except as required by law, we do not provide the personal information we collect to third parties without the user's consent. However, in providing the Service, the following operators handle information in their respective roles:</p>
+    <ul>
+      <li>App sales, payment processing, and distribution: Apple Inc. (United States) / for customers in Japan, iTunes K.K. (via the Mac App Store)</li>
+      <li>Website hosting and CDN: Cloudflare, Inc. (United States)</li>
+      <li>AI model distribution: Hugging Face, Inc. (United States)</li>
+    </ul>
+    <p>The privacy policies of those operators apply to their respective handling of information.</p>
+
+    <h2>Article 7. Security Measures</h2>
+    <p>We endeavor, within reasonable means, to manage the personal information we collect to prevent unauthorized access, loss, destruction, alteration, leakage, and similar incidents.</p>
+
+    <h2>Article 8. Disclosure, Correction, and Suspension of Use</h2>
+    <p>You may request disclosure, correction, suspension of use, or deletion of your personal information that we hold. For the procedure to make such a request, please contact the inquiry channel referenced in Article 10.</p>
+
+    <h2>Article 9. Amendments to This Policy</h2>
+    <p>We may amend this Policy as needed. Amended versions take effect from the time they are posted on this website. For material changes, we will provide notice within the App or on this website.</p>
+
+    <h2>Article 10. Contact</h2>
+    <p>For inquiries regarding this Policy, please use the contact channel on this website (to be published).</p>
+  </article>
+</main>
+
+<footer class="foot">
+  <span>© 2026 Postra</span>
+  <span><a href="./">Back to top</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
+</footer>
+
+</body></html>

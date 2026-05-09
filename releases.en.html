@@ -1,8 +1,10 @@
 <!doctype html>
-<html lang="ja"><head>
+<html lang="en"><head>
 <meta charset="utf-8">
-<title>リリースノート — Postra</title>
-<meta name="description" content="Postra の更新履歴。新機能・改善・不具合修正の記録。">
+<title>Release Notes — Postra</title>
+<meta name="description" content="Postra release history: new features, improvements, and bug fixes.">
+<link rel="alternate" hreflang="ja" href="https://postra.link/releases.html?lang=ja">
+<link rel="alternate" hreflang="en" href="https://postra.link/releases.html?lang=en">
 <link rel="icon" type="image/png" href="assets/app-icon.png">
 <link rel="apple-touch-icon" href="assets/app-icon.png">
 <meta name="theme-color" content="#0f1115">
@@ -24,7 +26,8 @@ a:hover{color:#cfe4ff;border-bottom-color:rgba(207,228,255,.6)}
 .nav-inner{max-width:880px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;gap:20px}
 .brand{display:flex;align-items:center;height:30px}
 .brand img{height:100%;width:auto;display:block}
-.back-link{margin-left:auto;font-size:13.5px;color:var(--muted);border:none}
+.back-link{font-size:13.5px;color:var(--muted);border:none}
+.back-link.to-app{margin-left:auto}
 .back-link:hover{color:var(--fg)}
 
 main{max-width:880px;margin:0 auto;padding:80px 28px 120px}
@@ -61,56 +64,56 @@ h1{font-size:40px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:
 <header class="nav">
   <div class="nav-inner">
     <a href="./" class="brand" aria-label="Postra"><img src="assets/logo-lockup-light.png" alt="Postra"></a>
-    <a href="?lang=en" class="back-link to-app" hreflang="en" lang="en" style="margin-left:auto">English</a>
-    <a href="./" class="back-link" style="margin-left:0">← Postra に戻る</a>
+    <a href="?lang=ja" class="back-link to-app" hreflang="ja" lang="ja">日本語</a>
+    <a href="./" class="back-link">← Back to Postra</a>
   </div>
 </header>
 
 <main>
-  <h1>リリースノート</h1>
-  <p class="lede">Postra の更新履歴です。新しいものから順に並んでいます。</p>
+  <h1>Release Notes</h1>
+  <p class="lede">Postra release history, with the most recent at the top.</p>
 
   <section class="release">
     <div class="release-head">
       <h2 class="release-version">Postra 1.1.0</h2>
       <span class="release-date">2026-XX-XX</span>
-      <span class="release-tag">初回リリース</span>
+      <span class="release-tag">First release</span>
     </div>
-    <p class="release-summary">Postra を販売開始しました。Mac (Apple Silicon) 専用としてリリースしています。</p>
+    <p class="release-summary">Postra is now on sale, released for Mac (Apple Silicon) only.</p>
 
-    <h3>主な機能</h3>
+    <h3>Main features</h3>
     <ul>
-      <li>類似検索（CLIP: 意味で似た写真 / DINOv2: 見た目で似た写真）</li>
-      <li>キーワード検索（自然言語で検索可能、タグ付け不要）</li>
-      <li>A/B デュアルレイアウト（並べて見比べて、残す方を書き出し）</li>
-      <li>非破壊レタッチ + トーン別カラーバランス（サイドカー保存、元ファイルは無変更）</li>
-      <li>SNS プリセット（1:1 / 4:5 / 16:9 / 9:16）</li>
-      <li>Apple Silicon の Metal GPU で AI 推論を実行 — M1 でも軽快に動作</li>
-      <li>1 ライセンスで Mac 2 台までインストール可</li>
+      <li>Similarity search (CLIP: semantically similar / DINOv2: visually similar)</li>
+      <li>Keyword search (natural language; no tagging required)</li>
+      <li>A/B dual layout (compare side by side, export the one you prefer)</li>
+      <li>Non-destructive retouch + split-tone color balance (saved to a sidecar; original files are not modified)</li>
+      <li>Social presets (1:1 / 4:5 / 16:9 / 9:16)</li>
+      <li>AI inference on the Apple Silicon Metal GPU — responsive on M1</li>
+      <li>One license, installable on up to two Macs</li>
     </ul>
 
-    <h3>動作環境</h3>
+    <h3>System requirements</h3>
     <ul>
-      <li>macOS 12 Monterey 以降 / Apple Silicon（M1 以上）必須 / 8 GB RAM 以上（推奨 16 GB 以上）</li>
-      <li>※ Intel Mac ではアプリ自体が起動できません</li>
+      <li>macOS 12 Monterey or later / Apple Silicon (M1 or later) required / 8 GB RAM or more (16 GB or more recommended)</li>
+      <li>* Will not launch on Intel Macs</li>
     </ul>
 
-    <h3>既知の問題</h3>
+    <h3>Known issues</h3>
     <ul>
-      <li>1 万枚を超える大量フォルダでは、初回 AI 解析にお時間をいただきます（バックグラウンド継続実行 / 一時停止・再開対応）。</li>
+      <li>For very large folders (over 10,000 photos), the first AI analysis pass takes time. Analysis runs in the background and supports pause / resume.</li>
     </ul>
 
-    <h3>サポート</h3>
+    <h3>Support</h3>
     <ul>
-      <li>不具合のご報告・ご要望は <a href="contact.html">お問い合わせフォーム</a> から。</li>
-      <li>返金ポリシーは <a href="tokushoho.html">特定商取引法に基づく表記</a> をご確認ください。</li>
+      <li>For bug reports and feature requests, please use the <a href="contact.html">contact form</a>.</li>
+      <li>For the refund policy, please refer to the <a href="tokushoho.html" hreflang="ja" lang="ja">Tokushoho notice (JP)</a>.</li>
     </ul>
   </section>
 </main>
 
 <footer class="foot">
   <span>© 2026 Postra</span>
-  <span><a href="./">トップへ戻る</a> &nbsp;·&nbsp; <a href="terms.html">利用規約</a> &nbsp;·&nbsp; <a href="privacy.html">プライバシーポリシー</a> &nbsp;·&nbsp; <a href="tokushoho.html">特定商取引法に基づく表記</a></span>
+  <span><a href="./">Back to top</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="tokushoho.html" hreflang="ja" lang="ja">特定商取引法に基づく表記 (JP)</a></span>
 </footer>
 
 </body></html>

@@ -26,3 +26,7 @@ npm-debug.log*
 *BU.html
 *BU.css
 indexcurrent.html
+assets/og-image-original-text.png
+
+# SNS marketing videos (Twitter/X distribution only — not used in LP)
+assets/videos/sns/

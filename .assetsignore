@@ -1,10 +1,52 @@
 # Files in this list are excluded from the Cloudflare Workers static asset bundle.
 # Use the same syntax as .gitignore.
 
-HANDOFF.md
-README.md
+# Git internals — MUST never be exposed publicly
+.git/
 .gitignore
-.assetsignore
+.gitattributes
+
+# Editor / tooling state
+.claude/
+.vscode/
+.idea/
+.wrangler/
+.wrangler
+
+# macOS metadata
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# Node tooling
+node_modules/
+npm-debug.log*
+.env
+.env.local
+
+# Wrangler config (deployed via CLI, not as static asset)
 wrangler.jsonc
 wrangler.toml
-.wrangler
+package.json
+package-lock.json
+yarn.lock
+
+# Worker source (handled by `main`, not assets)
+_worker.js
+
+# Local backups
+*BU.html
+*BU.css
+indexcurrent.html
+assets/og-image-original-text.png
+
+# SNS marketing videos (Twitter/X distribution only)
+assets/videos/sns/
+
+# Documentation / scratch
+HANDOFF.md
+README.md
+*.md
+LICENSE
+.assetsignore

@@ -4,6 +4,7 @@
   "main": "_worker.js",
   "compatibility_date": "2026-04-25",
   "workers_dev": true,
+  "preview_urls": false,
   "routes": [
     { "pattern": "postra.link/*", "zone_name": "postra.link" },
     { "pattern": "www.postra.link/*", "zone_name": "postra.link" }

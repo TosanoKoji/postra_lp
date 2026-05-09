@@ -35,6 +35,16 @@ yarn.lock
 # Worker source (handled by `main`, not assets)
 _worker.js
 
+# Dev tooling / build scripts (must not be served as static assets)
+*.sh
+*.py
+build-og.sh
+_serve.py
+serve.py
+assets/og-template.html
+deploy.sh
+verify-deploy.sh
+
 # Local backups
 *BU.html
 *BU.css

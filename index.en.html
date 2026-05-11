@@ -587,7 +587,66 @@ Postra is an app for finding the fun in there again.</p>
   </div>
 </section>
 
-<!-- ============ SECTION 3: Compose ============ -->
+<!-- ============ SECTION 2.5: AI Scoring (NIMA + Harmony) ============ -->
+<!--
+  TODO [素材差替]:
+    NIMA バッジ表示の画面録画 / 色調ハーモニーの判定 UI 画面録画を差し替える。
+    推奨: 1600×1000 / 6〜8秒 / 30fps / MP4 (H.264) / 音声なし / 500KB〜1.5MB
+    配置先: assets/sec-score-nima.mp4 / assets/sec-score-harmony.mp4
+-->
+<section id="score" class="reveal" data-screen-label="03b-score">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">03 · AI sizes up the "good ones"</div>
+      <h2>Let the AI rough-cut your picks<br>before you even start choosing.</h2>
+      <p class="section-lede">Postra scores each photo on aesthetic quality as it loads.<br>The top 15% of the folder lights up at a glance, so the best shots surface fast.<br>When you build a layout from two or more photos, color harmony is judged automatically.</p>
+    </div>
+    <div class="ai">
+      <div class="ai-demo">
+        <div class="ai-tabs" role="tablist">
+          <button type="button" class="ai-tab is-active" data-target="scoreVideo" data-src="assets/sec-score-nima.mp4" role="tab" aria-selected="true">Aesthetic score (NIMA)</button>
+          <button type="button" class="ai-tab" data-target="scoreVideo" data-src="assets/sec-score-harmony.mp4" role="tab">Color harmony</button>
+        </div>
+        <div class="ai-video">
+          <video id="scoreVideo" src="assets/sec-score-nima.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+      </div>
+      <div class="copy">
+        <h3>A first read on "good vs. not", from the AI.</h3>
+        <p>Postra tags every photo with a <strong>★1.0〜10.0 aesthetic score</strong> as it loads.<br>Not absolute — color-coded as a <strong>relative ranking</strong> within the open folder, so the day's best shots float to the top.<br>Build a composite layout and Postra grades <strong>color harmony</strong> in Lab space across three levels — so color-clashed sets are caught before you export.</p>
+        <div class="feats">
+          <div class="feat">
+            <span class="k">NIMA</span>
+            <div><strong>Aesthetic score (NIMA)</strong><span>A MobileNet-based model rates each photo ★1.0〜10.0 for completeness. Top 15% / middle / bottom is color-coded within the folder. Runs fast on Apple Neural Engine.</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">HARMONY</span>
+            <div><strong>Color harmony</strong><span>With two or more slots filled, Postra judges color cohesion in Lab space across three levels — "in tune / slightly off / mismatched". Prevents color-fractured SNS grids before export.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const tabs = document.querySelectorAll('#score .ai-tab');
+  const video = document.getElementById('scoreVideo');
+  if (!video || !tabs.length) return;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const src = tab.getAttribute('data-src');
+      if (!src) return;
+      tabs.forEach(t => { t.classList.remove('is-active'); t.removeAttribute('aria-selected'); });
+      tab.classList.add('is-active'); tab.setAttribute('aria-selected', 'true');
+      video.src = src; video.load(); video.play().catch(()=>{});
+    });
+  });
+})();
+</script>
+
+<!-- ============ SECTION 4: Compose ============ -->
 <!--
   TODO [素材差替 / HANDOFF §4]:
     デュアル A/B レイアウトのモックを実 UI の画面録画に差し替える。
@@ -597,7 +656,7 @@ Postra is an app for finding the fun in there again.</p>
 <section id="compose" class="reveal" data-screen-label="04-compose">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">03 · Dual A/B layout</div>
+      <div class="section-label">04 · Dual A/B layout</div>
       <h2>3, 4, or free-form layouts.<br>When you can't decide, build both and compare.</h2>
       <p class="section-lede">The right-hand layout panel can split into two, so you can build two layouts in parallel — same source or different.<br>Compare side by side and export whichever you prefer.<br>Aspect ratios for social: 1:1 / 4:5 / 16:9 / 9:16 and others.<br>Save presets, change ratios freely. Export single photos, or export the layout exactly as shown.</p>
     </div>
@@ -658,7 +717,7 @@ Postra is an app for finding the fun in there again.</p>
 <section class="reveal" data-screen-label="05-retouch">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">04 · Non-destructive retouch + color balance</div>
+      <div class="section-label">05 · Non-destructive retouch + color balance</div>
       <h2>The original is never touched.<br>Roll back and redo as many times as you like.</h2>
       <p class="section-lede">Exposure, contrast, highlights, shadows, white balance, tint, saturation, vibrance, tone curve, and split-tone color balance — all non-destructive. <strong>RAW from major formats (ARW · DNG and others) can be developed inside the app with a lightweight develop</strong>. For Fuji X-Trans (RAF), Postra uses the embedded JPEG so you can browse, lay out, and retouch right away. When you need a full-featured develop, hand off to Capture One or your preferred app. All adjustment values are saved to a sidecar; the original JPG / RAW stays untouched.</p>
     </div>
@@ -696,7 +755,7 @@ Postra is an app for finding the fun in there again.</p>
 <section id="speed" class="reveal" data-screen-label="06-speed">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">05 · Speed</div>
+      <div class="section-label">06 · Speed</div>
       <h2>How will it feel on your machine?</h2>
       <p class="section-lede">Processing time depends heavily on CPU / GPU and SSD speed. The numbers below come from two of our own machines, measured on a folder of 30,000 photos (about 1–5 MB each). Use whichever is closest to your setup as a reference.<br>Once the initial scan is done, scrolling and layout become responsive.</p>
     </div>
@@ -755,7 +814,7 @@ Postra is an app for finding the fun in there again.</p>
 <section class="reveal" data-screen-label="07-system">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">06 · System requirements</div>
+      <div class="section-label">07 · System requirements</div>
       <h2>Built for Apple Silicon Macs.</h2>
       <p class="section-lede">Optimized for Apple Silicon (M1 and later) Macs. AI inference runs on the Metal GPU, fully on-device. No internet connection required (except for initial setup and update checks).</p>
     </div>
@@ -787,7 +846,7 @@ Postra is an app for finding the fun in there again.</p>
 <section id="pricing" class="reveal" data-screen-label="08-pricing">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">07 · Pricing</div>
+      <div class="section-label">08 · Pricing</div>
       <h2>One-time purchase. Not a subscription.</h2>
       <p class="section-lede">Distribution via the Mac App Store is planned.</p>
     </div>

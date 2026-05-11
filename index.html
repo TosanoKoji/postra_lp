@@ -583,7 +583,66 @@ Postra は、そこに楽しみを見出すアプリです。</p>
   </div>
 </section>
 
-<!-- ============ SECTION 3: Compose ============ -->
+<!-- ============ SECTION 2.5: AI Scoring (NIMA + Harmony) ============ -->
+<!--
+  TODO [素材差替]:
+    NIMA バッジ表示の画面録画 / 色調ハーモニーの判定 UI 画面録画を差し替える。
+    推奨: 1600×1000 / 6〜8秒 / 30fps / MP4 (H.264) / 音声なし / 500KB〜1.5MB
+    配置先: assets/sec-score-nima.mp4 / assets/sec-score-harmony.mp4
+-->
+<section id="score" class="reveal" data-screen-label="03b-score">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">03 · AI が"良さ"を見立てる</div>
+      <h2>選ぶ前の目利きは、<br>AI に下書きさせる。</h2>
+      <p class="section-lede">Postra は読み込んだ写真ごとに、美的な完成度をスコアにして表示します。<br>「フォルダ内で上位 15%」が一目で分かるので、ベストショットを見つけるのが早い。<br>組み写真を作るときは、選んだ 2 枚以上の色味が合っているかも自動で判定。</p>
+    </div>
+    <div class="ai">
+      <div class="ai-demo">
+        <div class="ai-tabs" role="tablist">
+          <button type="button" class="ai-tab is-active" data-target="scoreVideo" data-src="assets/sec-score-nima.mp4" role="tab" aria-selected="true">美的スコア（NIMA）</button>
+          <button type="button" class="ai-tab" data-target="scoreVideo" data-src="assets/sec-score-harmony.mp4" role="tab">色調ハーモニー</button>
+        </div>
+        <div class="ai-video">
+          <video id="scoreVideo" src="assets/sec-score-nima.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+      </div>
+      <div class="copy">
+        <h3>"良し悪しの当たり" を、AI が先につける。</h3>
+        <p>Postra は読み込み時に、1 枚ずつ ★1.0〜10.0 の<strong>美的スコア</strong>を付与。<br>絶対評価ではなく、開いているフォルダ内の<strong>相対順位</strong>として色分け表示するから、その日のベストショットが浮き上がります。<br>組み写真を組んだ瞬間には、Lab 色空間で<strong>色調の統一感</strong>を 3 段階で判定。色の散らかった組を未然に防げます。</p>
+        <div class="feats">
+          <div class="feat">
+            <span class="k">NIMA</span>
+            <div><strong>美的スコア（NIMA）</strong><span>MobileNet ベースのモデルが、1 枚ずつ完成度を ★1.0〜10.0 で評価。フォルダ内で上位 15% / 中位 / 下位を色で見分けられます。Apple Neural Engine で高速に推論。</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">HARMONY</span>
+            <div><strong>色調ハーモニー</strong><span>組み写真スロットが 2 枚以上のとき、Lab 色空間で色味の統一感を「合っている / 少し外れている / 合っていない」の 3 段階で判定。SNS グリッドの色割れを未然に防ぐ。</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const tabs = document.querySelectorAll('#score .ai-tab');
+  const video = document.getElementById('scoreVideo');
+  if (!video || !tabs.length) return;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const src = tab.getAttribute('data-src');
+      if (!src) return;
+      tabs.forEach(t => { t.classList.remove('is-active'); t.removeAttribute('aria-selected'); });
+      tab.classList.add('is-active'); tab.setAttribute('aria-selected', 'true');
+      video.src = src; video.load(); video.play().catch(()=>{});
+    });
+  });
+})();
+</script>
+
+<!-- ============ SECTION 4: Compose ============ -->
 <!--
   TODO [素材差替 / HANDOFF §4]:
     デュアル A/B レイアウトのモックを実 UI の画面録画に差し替える。
@@ -593,7 +652,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
 <section id="compose" class="reveal" data-screen-label="04-compose">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">03 · デュアル A/B レイアウト</div>
+      <div class="section-label">04 · デュアル A/B レイアウト</div>
       <h2>3枚、4枚、自由なレイアウト。<br>迷ったら、両方で比べてみる。</h2>
       <p class="section-lede">右側レイアウトパネルは2つに分割も可能、同じ素材または別の素材で別レイアウトを並行して組むことも。<br>並べて見比べて、好きな方を書き出す。<br>SNS 用の 1:1 / 4:5 / 16:9 / 9:16 他、柔軟に対応。<br>変更もプリセット保存もご自由に。個別写真の書き出しや「見たまんま」レイアウト出力も可能</p>
     </div>
@@ -654,7 +713,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
 <section class="reveal" data-screen-label="05-retouch">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">04 · 非破壊レタッチ + カラーバランス</div>
+      <div class="section-label">05 · 非破壊レタッチ + カラーバランス</div>
       <h2>元画像は触らない。<br>後から何度でも、やり直せる。</h2>
       <p class="section-lede">露光・コントラスト・ハイライト・シャドウから、色温度・ティント・彩度・鮮やかさ・トーンカーブ・トーン別カラーバランスまで、すべて非破壊で。<strong>主要機種の RAW（ARW · DNG など）は本体で簡易現像</strong>も可能。Fuji X-Trans (RAF) は埋込 JPEG をそのまま素材化。本格現像が必要な場合は Capture One 等へ引き渡せます。値はすべてサイドカーに保存され、撮って出しの JPG / RAW はそのまま残ります。</p>
     </div>
@@ -692,7 +751,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
 <section id="speed" class="reveal" data-screen-label="06-speed">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">05 · スピード</div>
+      <div class="section-label">06 · スピード</div>
       <h2>あなたの環境だと、どれくらい？</h2>
       <p class="section-lede">処理時間は CPU / GPU と SSD の速度で大きく変わります。下は手元にある2台の実機で 30,000 枚（1 枚あたり 約 1〜5MB）を実測した参考値です。お使いの環境に近いほうを目安にしてください。<br>初回スキャンが終われば、その先はスクロールもレイアウトも即応します。</p>
     </div>
@@ -751,7 +810,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
 <section class="reveal" data-screen-label="07-system">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">06 · 動作環境</div>
+      <div class="section-label">07 · 動作環境</div>
       <h2>Apple Silicon の Mac、専用設計。</h2>
       <p class="section-lede">Apple Silicon (M1 以上) の Mac に最適化。Metal GPU を活用して AI 推論まですべて端末ローカルで完結します。ネット接続は不要（初期設定とアップデート確認を除く）。</p>
     </div>
@@ -783,7 +842,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
 <section id="pricing" class="reveal" data-screen-label="08-pricing">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">07 · 価格</div>
+      <div class="section-label">08 · 価格</div>
       <h2>買い切り。サブスクではありません。</h2>
       <p class="section-lede">Mac App Store からの販売を予定しております。</p>
     </div>

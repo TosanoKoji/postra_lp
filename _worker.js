@@ -17,6 +17,7 @@ const PAGE_MAP = {
   '/terms.html': 'terms',
   '/contact.html': 'contact',
   '/releases.html': 'releases',
+  '/tutorials.html': 'tutorials',
 };
 
 const STATIC_EXT_RE = /\.(css|js|png|jpg|jpeg|webp|gif|mp4|webm|ico|svg|woff2?|ttf|map|json|xml|txt)$/i;

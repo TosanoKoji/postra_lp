@@ -451,7 +451,7 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <span class="meta mono">v1.1 · Mac (Apple Silicon)</span>
+      <span class="meta mono">v1.2 · Mac (Apple Silicon)</span>
       <a class="btn lang-toggle" href="?lang=ja" hreflang="ja" lang="ja">日本語</a>
       <a class="btn btn-primary" href="#pricing">Buy now</a>
     </div>
@@ -602,9 +602,9 @@ Postra is an app for finding the fun in there again.</p>
 <section id="score" class="reveal" data-screen-label="03b-score">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">03 · AI sizes up the "good ones"</div>
-      <h2>Let the AI rough-cut your picks<br>before you even start choosing.</h2>
-      <p class="section-lede">Postra scores each photo on aesthetic quality as it loads.<br>The top 15% of the folder lights up at a glance, so the best shots surface fast.<br>When you build a layout from two or more photos, color harmony is judged automatically.</p>
+      <div class="section-label">03 · Quality, and your taste</div>
+      <h2>The crowd's average — and your taste.<br>Get a read from both.</h2>
+      <p class="section-lede">Postra scores each photo on aesthetic quality (NIMA) as it loads, color-coded by its rank within the folder.<br>But that's a crowd-average yardstick. So Postra can also re-rank your whole library by <strong>Your Taste</strong> — learned from the photos you actually pick or rate highly.<br>When you build a layout from two or more photos, color harmony is judged automatically.</p>
     </div>
     <div class="ai">
       <div class="ai-demo">
@@ -618,11 +618,15 @@ Postra is an app for finding the fun in there again.</p>
       </div>
       <div class="copy">
         <h3>A first read on "good vs. not", from the AI.</h3>
-        <p>Postra tags every photo with a <strong>★1.0〜10.0 aesthetic score</strong> as it loads.<br>Not absolute — color-coded as a <strong>relative ranking</strong> within the open folder, so the day's best shots float to the top.<br>Build a composite layout and Postra grades <strong>color harmony</strong> in Lab space across three levels — so color-clashed sets are caught before you export.</p>
+        <p>Postra tags every photo with a <strong>★1.0〜10.0 aesthetic score (NIMA)</strong> as it loads — color-coded as a <strong>relative ranking</strong> within the open folder, so the day's best shots float to the top.<br>NIMA is only a <strong>crowd-average yardstick</strong>, though. Your own taste is a different thing — so re-rank by <strong>"Your Taste"</strong>, learned from the photos you pick or rate highly.<br>Build a composite layout and Postra grades <strong>color harmony</strong> in Lab space across three levels — so color-clashed sets are caught before you export.</p>
         <div class="feats">
           <div class="feat">
             <span class="k">NIMA</span>
-            <div><strong>Aesthetic score (NIMA)</strong><span>A MobileNet-based model rates each photo ★1.0〜10.0 for completeness. Top 15% / middle / bottom is color-coded within the folder. Runs fast on Apple Neural Engine.</span></div>
+            <div><strong>Aesthetic score (NIMA)</strong><span>A MobileNet-based model rates each photo ★1.0〜10.0 for completeness (a crowd-average yardstick). Top 15% / middle / bottom is color-coded within the folder. Runs fast on Apple Neural Engine.</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">YOUR TASTE</span>
+            <div><strong>Your Taste (visual)</strong><span>DINOv2 learns the look of the photos you pick or rate ★4+, then re-ranks your whole library toward your taste. Separate from the crowd-average NIMA — this is your own bar. Runs entirely on-device.</span></div>
           </div>
           <div class="feat">
             <span class="k">HARMONY</span>
@@ -740,6 +744,7 @@ Postra is an app for finding the fun in there again.</p>
         <h3>Pick, refine, export.<br>One screen, one breath.</h3>
         <p>Once a layout is built, switch to retouch mode and adjust on the spot. Pick another photo and press <span class="mono">Shift V</span> to paste the same settings. <strong>JPG retouch and lightweight RAW develop both happen on the same screen</strong>. RAW from major formats (ARW · DNG · RAF and others) can be developed with sliders. Fuji X-Trans (RAF) is now supported for in-app develop too; for a full-featured develop, hand off to Capture One or Lightroom.</p>
         <ul class="bullets">
+          <li><span class="m">—</span><span>While you drag a slider, see <strong>before / after</strong> side by side (Command + scroll works too).</span></li>
           <li><span class="m">—</span><span>All adjustments are saved to a sidecar. The original JPG / RAW is never overwritten.</span></li>
           <li><span class="m">—</span><span>Split-tone color balance for shadows / midtones / highlights.</span></li>
           <li><span class="m">—</span><span>Reset to return to the original any time.</span></li>
@@ -834,7 +839,7 @@ Postra is an app for finding the fun in there again.</p>
       </div>
       <div class="sys-card">
         <h4>Supported files</h4>
-        <div class="row"><span class="k">Images</span><span class="v">JPEG · HEIC</span></div>
+        <div class="row"><span class="k">Images</span><span class="v">JPEG · HEIC · PNG and more</span></div>
         <div class="row"><span class="k">RAW</span><span class="v">In-app lightweight develop (ARW · DNG · RAF and others) / external handoff</span></div>
         <div class="row"><span class="k">Export</span><span class="v">JPEG</span></div>
         <div class="row"><span class="k">Metadata</span><span class="v">Reads shooting EXIF (camera / lens / ISO, etc.) + generated in-app</span></div>
@@ -929,11 +934,11 @@ Postra is an app for finding the fun in there again.</p>
       </details>
       <details class="faq-item">
         <summary>Is there a guide?</summary>
-        <p>Yes — short how-to videos for each feature are available on the <a href="tutorials.html" style="color:#9fd0ff">Guide</a> page. (Videos are currently in Japanese; English versions are in production.)</p>
+        <p>Yes — short how-to videos for each feature are available on the <a href="tutorials.html" style="color:#9fd0ff">Guide</a> page. (Videos are currently in Japanese; English versions are in production.) A short getting-started guide also appears inside the app on first launch.</p>
       </details>
       <details class="faq-item">
         <summary>What's the update policy?</summary>
-        <p>We've packed in nearly every feature we could think of for the initial release, but we'll keep refining the app continuously.<br><br><strong>Added in version 1.1 (released):</strong> a refined RAW develop pipeline including Fuji RAF support, shooting metadata (EXIF) reading with sorting and filtering by camera / lens / color, automatic grouping of lookalike photos, and Carousel export and the Free-placement canvas (Beta).<br><br><strong>Planned next (timing TBD):</strong><br>1. Tag management and XMP metadata reading<br>2. Caption draft generation and XMP writing<br>3. Layout compatibility scoring and smart cropping suggestions</p>
+        <p>We've packed in nearly every feature we could think of for the initial release, but we'll keep refining the app continuously.<br><br><strong>Added in version 1.1 (released):</strong> a refined RAW develop pipeline including Fuji RAF support, shooting metadata (EXIF) reading with sorting and filtering by camera / lens / color, automatic grouping of lookalike photos, and Carousel export and the Free-placement canvas (Beta).<br><br><strong>Added in version 1.2 (released):</strong> "Your Taste (visual)" sorting learned from your picks and ratings, a first-run getting-started guide, rate-on-hover on thumbnails with auto-advance, a native macOS menu bar, before/after retouch compare, and a "Current View" summary in the sidebar.<br><br><strong>Planned next (timing TBD):</strong><br>1. Tag management and XMP metadata reading<br>2. Caption draft generation and XMP writing<br>3. Layout compatibility scoring and smart cropping suggestions</p>
       </details>
       <details class="faq-item">
         <summary>Will Postra be sold outside the Mac App Store?</summary>
@@ -985,7 +990,7 @@ Postra is an app for finding the fun in there again.</p>
   </div>
   <div class="foot-bottom">
     <span>© 2026 Postra</span>
-    <span class="mono">v1.1 · Mac (Apple Silicon) · Mac App Store</span>
+    <span class="mono">v1.2 · Mac (Apple Silicon) · Mac App Store</span>
   </div>
 </footer>
 

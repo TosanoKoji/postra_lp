@@ -4,20 +4,20 @@
 <title>Postra — 見つける、選ぶ、組む、触る、届ける。</title>
 <meta name="description" content="Postra は Mac (Apple Silicon) 専用のフォト・キュレーション + 組写真レイアウトアプリ。10,000枚超のライブラリから、残す一枚を見つける。">
 
-<!-- Open Graph / Twitter Card — ドメイン・画像は暫定値、本番時に置換 -->
+<!-- Open Graph / Twitter Card — 本番ドメイン postra.link -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Postra">
 <meta property="og:title" content="Postra — 見つける、選ぶ、組む、触る、届ける。">
 <meta property="og:description" content="Mac (Apple Silicon) 専用のフォト・キュレーション + 組写真レイアウトアプリ。10,000枚超のライブラリから、残す一枚を見つける。">
-<meta property="og:url" content="https://postra-lp.tosano-koji-0217.workers.dev/">
-<meta property="og:image" content="https://postra-lp.tosano-koji-0217.workers.dev/assets/og-image.png">
+<meta property="og:url" content="https://postra.link/">
+<meta property="og:image" content="https://postra.link/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Postra — 見つける、選ぶ、組む、触る、届ける。">
 <meta name="twitter:description" content="Mac (Apple Silicon) 専用のフォト・キュレーション + 組写真レイアウトアプリ。10,000枚超のライブラリから、残す一枚を見つける。">
-<meta name="twitter:image" content="https://postra-lp.tosano-koji-0217.workers.dev/assets/og-image.png">
+<meta name="twitter:image" content="https://postra.link/assets/og-image.png">
 <meta name="theme-color" content="#0f1115">
 <link rel="icon" type="image/png" href="assets/app-icon.png">
 <link rel="apple-touch-icon" href="assets/app-icon.png">
@@ -447,7 +447,7 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <span class="meta mono">v1.1 · Mac (Apple Silicon)</span>
+      <span class="meta mono">v1.2 · Mac (Apple Silicon)</span>
       <a class="btn lang-toggle" href="?lang=en" hreflang="en" lang="en">English</a>
       <a class="btn btn-primary" href="#pricing">今すぐ購入</a>
     </div>
@@ -598,9 +598,9 @@ Postra は、そこに楽しみを見出すアプリです。</p>
 <section id="score" class="reveal" data-screen-label="03b-score">
   <div class="container">
     <div class="section-head">
-      <div class="section-label">03 · AI が"良さ"を見立てる</div>
-      <h2>選ぶ前の目利きは、<br>AI に下書きさせる。</h2>
-      <p class="section-lede">Postra は読み込んだ写真ごとに、美的な完成度をスコアにして表示します。<br>「フォルダ内で上位 15%」が一目で分かるので、ベストショットを見つけるのが早い。<br>組み写真を作るときは、選んだ 2 枚以上の色味が合っているかも自動で判定。</p>
+      <div class="section-label">03 · AI が"良さ"の下書きをする</div>
+      <h2>世間の平均点と、<br>あなたの「好み」。両方で当たりをつける。</h2>
+      <p class="section-lede">Postra は読み込んだ写真ごとに美的スコア（NIMA）を付け、フォルダ内の相対順位で色分け表示します。<br>ただしそれは"世間の平均的な目安"。だから、あなたが採用・高評価した写真から学ぶ「あなた好み順」で、<strong>あなたの感覚に近い順</strong>にも並べ替えられます。<br>組み写真を作るときは、選んだ 2 枚以上の色味が合っているかも自動で判定。</p>
     </div>
     <div class="ai">
       <div class="ai-demo">
@@ -614,11 +614,15 @@ Postra は、そこに楽しみを見出すアプリです。</p>
       </div>
       <div class="copy">
         <h3>"良し悪しの当たり" を、AI が先につける。</h3>
-        <p>Postra は読み込み時に、1 枚ずつ ★1.0〜10.0 の<strong>美的スコア</strong>を付与。<br>絶対評価ではなく、開いているフォルダ内の<strong>相対順位</strong>として色分け表示するから、その日のベストショットが浮き上がります。<br>組み写真を組んだ瞬間には、Lab 色空間で<strong>色調の統一感</strong>を 3 段階で判定。色の散らかった組を未然に防げます。</p>
+        <p>Postra は読み込み時に、1 枚ずつ ★1.0〜10.0 の<strong>美的スコア（NIMA）</strong>を付与。絶対評価ではなく、開いているフォルダ内の<strong>相対順位</strong>として色分け表示するから、その日のベストショットが浮き上がります。<br>NIMA はあくまで<strong>世間の平均的な目安</strong>。「自分の好み」はまた別物なので、あなたが採用・高評価した写真から学ぶ<strong>「あなた好み順（見た目）」</strong>で、あなたの感覚に近い順にも並べ替えられます。<br>組み写真を組んだ瞬間には、Lab 色空間で<strong>色調の統一感</strong>を 3 段階で判定。色の散らかった組を未然に防げます。</p>
         <div class="feats">
           <div class="feat">
             <span class="k">NIMA</span>
-            <div><strong>美的スコア（NIMA）</strong><span>MobileNet ベースのモデルが、1 枚ずつ完成度を ★1.0〜10.0 で評価。フォルダ内で上位 15% / 中位 / 下位を色で見分けられます。Apple Neural Engine で高速に推論。</span></div>
+            <div><strong>美的スコア（NIMA）</strong><span>MobileNet ベースのモデルが、1 枚ずつ完成度を ★1.0〜10.0 で評価（世間一般の平均的な"目安"）。フォルダ内で上位 15% / 中位 / 下位を色で見分けられます。Apple Neural Engine で高速に推論。</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">YOUR TASTE</span>
+            <div><strong>あなた好み順（見た目）</strong><span>採用・★4 以上にした写真の"見た目"を DINOv2 が学習し、ライブラリ全体をあなたの好みに近い順へ再ランク。世間平均の NIMA とは別に、あなた自身の基準で並べ替えます。端末内で完結。</span></div>
           </div>
           <div class="feat">
             <span class="k">HARMONY</span>
@@ -736,6 +740,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
         <h3>選ぶ、触る、書き出す。<br>ひとつの画面で、ひと呼吸で。</h3>
         <p>レイアウトを組んだら、レタッチモードでそのまま調整へ。別の写真を選んで <span class="mono">Shift V</span> で同じ設定をペースト。<strong>JPG レタッチも RAW 簡易現像も、同じ画面で完結</strong>。ARW · DNG · RAF など主要機種の RAW はスライダー操作でそのまま簡易現像できます。富士フイルム X-Trans (RAF) も本体での簡易現像に対応。本格現像が必要な場合は Capture One や Lightroom に引き渡せます。</p>
         <ul class="bullets">
+          <li><span class="m">—</span><span>スライダー操作中は<strong>調整前 / 調整後</strong>を自動で並べて比較できます（Command + ホイールでも）。</span></li>
           <li><span class="m">—</span><span>調整値はサイドカーに保存。元の JPG / RAW は一切書き換えません。</span></li>
           <li><span class="m">—</span><span>トーン別（シャドウ / ミッドトーン / ハイライト）にカラーバランス可能。</span></li>
           <li><span class="m">—</span><span>リセットでいつでも撮って出しに戻せる。</span></li>
@@ -830,7 +835,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
       </div>
       <div class="sys-card">
         <h4>対応ファイル</h4>
-        <div class="row"><span class="k">画像</span><span class="v">JPEG · HEIC</span></div>
+        <div class="row"><span class="k">画像</span><span class="v">JPEG · HEIC · PNG ほか</span></div>
         <div class="row"><span class="k">RAW</span><span class="v">本体簡易現像 (ARW · DNG · RAF など) / 外部連携</span></div>
         <div class="row"><span class="k">書き出し</span><span class="v">JPEG</span></div>
         <div class="row"><span class="k">メタデータ</span><span class="v">撮影 Exif 読込（カメラ / レンズ / ISO 等）+ アプリ内生成</span></div>
@@ -925,11 +930,11 @@ Postra は、そこに楽しみを見出すアプリです。</p>
       </details>
       <details class="faq-item">
         <summary>使い方の動画はありますか？</summary>
-        <p>機能ごとに短い使い方動画を公開しています。<a href="tutorials.html" style="color:#9fd0ff">使い方</a> からご覧いただけます（英語版は順次制作中）。</p>
+        <p>機能ごとに短い使い方動画を公開しています。<a href="tutorials.html" style="color:#9fd0ff">使い方</a> からご覧いただけます（英語版は順次制作中）。初回起動時には、アプリ内に簡単な「はじめてガイド」も表示されます。</p>
       </details>
       <details class="faq-item">
         <summary>アップデート方針は？</summary>
-        <p>初期状態で思いつくほとんどの機能は詰め込んでいるつもりですが、ブラッシュアップは継続していきます。<br><br><strong>バージョン 1.1（公開済み）で追加:</strong> 富士フイルム RAF を含む RAW 現像の強化、撮影メタデータ（Exif）の読み込みとカメラ / レンズ / 色などでのソート・絞り込み、類似写真の自動グループ化、カルーセル出力・自由配置キャンバス（ベータ）。<br><br><strong>今後の予定（時期は未定）:</strong><br>1. タグ付け機能と XMP メタデータの読み取り<br>2. 投稿文案の自動生成や XMP 書き出し<br>3. 組み写真の相性スコアやスマートトリミング提案</p>
+        <p>初期状態で思いつくほとんどの機能は詰め込んでいるつもりですが、ブラッシュアップは継続していきます。<br><br><strong>バージョン 1.1（公開済み）で追加:</strong> 富士フイルム RAF を含む RAW 現像の強化、撮影メタデータ（Exif）の読み込みとカメラ / レンズ / 色などでのソート・絞り込み、類似写真の自動グループ化、カルーセル出力・自由配置キャンバス（ベータ）。<br><br><strong>バージョン 1.2（公開済み）で追加:</strong> 採用・評価から学ぶ「あなた好み順（見た目）」の並べ替え、はじめてガイド、サムネイル上での採否・★評価＋評価後の自動送り、ネイティブのメニューバー、レタッチの調整前/後比較、サイドバーの「現在の表示」。<br><br><strong>今後の予定（時期は未定）:</strong><br>1. タグ付け機能と XMP メタデータの読み取り<br>2. 投稿文案の自動生成や XMP 書き出し<br>3. 組み写真の相性スコアやスマートトリミング提案</p>
       </details>
       <details class="faq-item">
         <summary>Mac App Store 以外での販売予定はありますか？</summary>
@@ -981,7 +986,7 @@ Postra は、そこに楽しみを見出すアプリです。</p>
   </div>
   <div class="foot-bottom">
     <span>© 2026 Postra</span>
-    <span class="mono">v1.1 · Mac (Apple Silicon) · Mac App Store</span>
+    <span class="mono">v1.2 · Mac (Apple Silicon) · Mac App Store</span>
   </div>
 </footer>
 

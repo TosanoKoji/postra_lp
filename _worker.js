@@ -1,6 +1,6 @@
 // Postra LP — language-aware Worker.
-// Routes localizable pages (/, /privacy.html, /terms.html, /contact.html,
-// /releases.html) to the appropriate JP or EN file based on:
+// Routes localizable pages (/, /ios, /privacy.html, /terms.html,
+// /contact.html, /releases.html) to the appropriate JP or EN file based on:
 //   1. ?lang=en|ja query param (sets cookie, then redirects to clean URL)
 //   2. postra_lang cookie
 //   3. CF-IPCountry header (JP -> ja)
@@ -13,6 +13,8 @@
 const PAGE_MAP = {
   '/': 'index',
   '/index.html': 'index',
+  '/ios': 'ios',
+  '/ios.html': 'ios',
   '/privacy.html': 'privacy',
   '/terms.html': 'terms',
   '/contact.html': 'contact',

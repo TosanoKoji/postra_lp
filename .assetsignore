@@ -42,6 +42,7 @@ build-og.sh
 _serve.py
 serve.py
 assets/og-template.html
+assets/og-template-ios.html
 deploy.sh
 verify-deploy.sh
 

@@ -40,6 +40,7 @@ FORBIDDEN=(
   /build-og.sh
   /_serve.py
   /assets/og-template.html
+  /assets/og-template-ios.html
   /assets/videos/sns/sns/postra-hero-x-1x1.mp4
   /assets/og-image-original-text.png
 )
@@ -47,18 +48,26 @@ FORBIDDEN=(
 # Paths that MUST return 200 (the LP itself). If any returns 404, exit 1.
 REQUIRED=(
   /
+  /ios
+  /ios.html
+  /ios.en.html
   /privacy.html
   /contact.html
   /tokushoho.html
   /releases.html
   /terms.html
+  /tutorials.html
   /index.en.html
   /privacy.en.html
   /contact.en.html
   /releases.en.html
   /terms.en.html
+  /tutorials.en.html
   /assets/og-image.png
   /assets/og-image-en.png
+  /assets/og-image-ios.png
+  /assets/og-image-ios-en.png
+  /assets/ios/ip-collage.jpg
   /colors_and_type.css
 )
 

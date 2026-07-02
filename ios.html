@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Postra Studio — 選ぶ、組む、仕上げる、届ける。iPhone / iPad の組写真・AI写真アプリ</title>
+<meta name="description" content="Postra Studio は iPhone / iPad の組写真 + AI フォトセレクトアプリ。「花」「空」と打てば AI がカメラロールから探し出し、38種のテンプレートで組んで、レタッチして、SNS 比率の高画質 JPEG で書き出せます。¥800 買い切り・広告なし。">
+
+<!-- Open Graph / Twitter Card — 本番ドメイン postra.link -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Postra">
+<meta property="og:title" content="Postra Studio — 選ぶ、組む、仕上げる、届ける。">
+<meta property="og:description" content="iPhone / iPad の組写真 + AI フォトセレクトアプリ。タグ付け不要、AI が写真を理解。¥800 買い切り・広告なし。">
+<meta property="og:url" content="https://postra.link/ios.html">
+<meta property="og:image" content="https://postra.link/assets/og-image-ios.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Postra Studio — 選ぶ、組む、仕上げる、届ける。">
+<meta name="twitter:description" content="iPhone / iPad の組写真 + AI フォトセレクトアプリ。タグ付け不要、AI が写真を理解。¥800 買い切り・広告なし。">
+<meta name="twitter:image" content="https://postra.link/assets/og-image-ios.png">
+<link rel="alternate" hreflang="ja" href="https://postra.link/ios.html?lang=ja">
+<link rel="alternate" hreflang="en" href="https://postra.link/ios.html?lang=en">
+<meta name="theme-color" content="#0f1115">
+<link rel="icon" type="image/png" href="assets/app-icon.png">
+<link rel="apple-touch-icon" href="assets/app-icon.png">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+:root{
+  --bg:#0f1115;--panel:#1b1e24;--card:#1b1e24;--card-2:#14171b;
+  --line:rgba(255,255,255,.06);--line-2:rgba(255,255,255,.1);--line-3:rgba(255,255,255,.14);
+  --fg:#eef0f2;--fg-2:#c9cdd2;--muted:#9aa1aa;--muted-2:#6e747c;
+  --accent:#57a8ff;--accent-2:#a47bff;
+  --grad:linear-gradient(135deg,#35d4ff 0%,#57a8ff 35%,#a47bff 70%,#ff6ec4 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Hiragino Sans","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1}
+.mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+img[hidden]{display:none}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(140%) blur(14px);background:rgba(15,17,21,.72);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;height:34px}
+.brand img{height:100%;width:auto;display:block;filter:drop-shadow(0 2px 10px rgba(138,110,255,.25))}
+.foot .brand{height:30px}
+.nav-links{display:flex;gap:24px;font-size:13.5px;color:var(--muted)}
+.nav-links a:hover{color:var(--fg)}
+.nav-cta{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-cta .meta{font-size:12px;color:var(--muted-2)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid var(--line-2);color:var(--fg);background:transparent;transition:background .15s,border-color .15s,opacity .15s}
+.btn:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.2)}
+.btn-primary{background:var(--grad);color:#0b0c10;border:none;padding:11px 22px}
+.btn-primary:hover{opacity:.93}
+
+/* ---------- Generic section ---------- */
+.container{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+[data-screen-label="02-features"]{padding-top:160px}
+[data-screen-label="10-pricing"]{padding-top:160px}
+[data-screen-label="12-faq"]{padding-top:96px;padding-bottom:96px}
+.section-head{margin-bottom:52px;max-width:760px}
+.section-label{font-size:11.5px;color:var(--muted-2);letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-family:ui-monospace,monospace}
+.section-label::before{content:"— "}
+h2{font-size:44px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:0 0 22px;color:var(--fg);text-wrap:balance}
+.section-lede{font-size:17px;color:var(--muted);line-height:1.8;margin:0;max-width:920px;text-wrap:pretty}
+.section-lede strong{color:var(--fg-2);font-weight:600}
+
+/* ---------- Hero ---------- */
+.hero{padding:80px 28px 64px;max-width:1180px;margin:0 auto;border-top:none}
+.hero-copy{max-width:920px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px;padding:5px 11px 5px 5px;border:1px solid var(--line-2);border-radius:999px;background:rgba(255,255,255,.02)}
+.eyebrow .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;background:rgba(87,168,255,.12);color:#cfe4ff;font-weight:600}
+.eyebrow .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(87,168,255,.7)}
+h1.display{font-size:72px;line-height:1.1;letter-spacing:-.015em;font-weight:700;margin:0 0 30px;color:var(--fg);text-wrap:balance}
+h1.display .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:19px;line-height:1.8;color:var(--muted);max-width:920px;margin:0 0 40px}
+.lede strong{color:var(--fg-2);font-weight:600}
+.hero-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-actions{margin-top:42px}
+.sub-meta{font-size:13px;color:var(--muted-2);display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.sub-meta .sep{width:3px;height:3px;border-radius:50%;background:var(--muted-2)}
+.sub-meta .check{color:#9fd0ff}
+
+/* ---------- Device frames ---------- */
+.phone{background:#0b0d11;border:1px solid var(--line-3);border-radius:44px;padding:10px;box-shadow:0 30px 90px rgba(0,0,0,.5),0 0 0 1px rgba(87,168,255,.04);position:relative}
+.phone img{width:100%;height:auto;aspect-ratio:1320/2868;object-fit:cover;border-radius:34px;background:#101113}
+.pad{background:#0b0d11;border:1px solid var(--line-3);border-radius:24px;padding:12px;box-shadow:0 30px 90px rgba(0,0,0,.5),0 0 0 1px rgba(87,168,255,.04)}
+.pad img{width:100%;height:auto;aspect-ratio:2752/2064;object-fit:cover;border-radius:12px;background:#101113}
+.sheet{background:#f6f7f8;border:1px solid var(--line-3);border-radius:22px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.5),0 0 0 1px rgba(87,168,255,.04)}
+.sheet img{width:100%;height:auto;aspect-ratio:900/1190;object-fit:cover;background:#f6f7f8}
+
+/* Hero: 3 phones side by side */
+.hero-phones{display:flex;justify-content:center;align-items:flex-start;gap:32px;margin-top:56px;padding-bottom:8px}
+.hero-phones .phone{width:236px;flex:none}
+.hero-phones .phone.main{width:290px;z-index:2}
+.hero-phones .phone.side{margin-top:56px}
+
+/* Phone trio (compose section) */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:980px;margin:0 auto}
+.trio figure{margin:0}
+.trio figcaption{margin-top:14px;text-align:center;font-size:13.5px;color:var(--muted)}
+.trio figcaption b{display:block;color:var(--fg-2);font-weight:600;font-size:14.5px;margin-bottom:2px}
+
+/* ---------- Tabbed screenshot demo (image swap) ---------- */
+.shot-demo{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:60px;align-items:start}
+.shot-demo .visual{display:flex;flex-direction:column;gap:14px}
+.shot-tabs{display:flex;gap:0;border:1px solid #343941;border-radius:12px;background:#22262b;overflow:hidden}
+.shot-tab{flex:1;border:none;border-left:1px solid #343941;background:transparent;color:var(--fg-2);padding:12px 8px;font-size:13.5px;font-weight:600;cursor:pointer;transition:background .12s ease,color .12s ease;font-family:inherit}
+.shot-tab:first-child{border-left:none}
+.shot-tab:hover{background:rgba(87,168,255,.08);color:var(--fg)}
+.shot-tab.is-active{background:rgba(87,168,255,.18);color:#cfe4ff;box-shadow:inset 0 -2px 0 var(--accent)}
+.shot-tab:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+/* feats list (Mac LP .ai .feats pattern) */
+.copy h3{font-size:30px;font-weight:700;margin:0 0 18px;letter-spacing:-.005em;text-wrap:balance}
+.copy p{color:var(--muted);font-size:16px;line-height:1.8;margin:0 0 18px}
+.copy p strong{color:var(--fg-2);font-weight:600}
+.feats{display:grid;grid-template-columns:1fr;gap:0;margin-top:24px}
+.feat{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.feat .k{font-family:ui-monospace,monospace;font-size:11px;color:var(--accent);letter-spacing:.1em;padding-top:3px;min-width:66px}
+.feat strong{display:block;font-size:15px;margin-bottom:4px;font-weight:600}
+.feat span{color:var(--muted);font-size:13.5px;line-height:1.7}
+.note{margin-top:26px;padding:18px 22px;background:var(--card);border:1px dashed var(--line-2);border-radius:12px;font-size:13.5px;color:var(--muted);line-height:1.8}
+.note .b{font-weight:600;color:var(--fg)}
+
+/* ---------- Flow steps (section 01) ---------- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.flow .step{background:var(--card);padding:28px 26px;display:flex;flex-direction:column;gap:8px}
+.flow .step .n{font-family:ui-monospace,monospace;font-size:12px;color:var(--accent);letter-spacing:.14em}
+.flow .step .t{font-size:18px;font-weight:700;color:var(--fg)}
+.flow .step p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.7}
+
+/* ---------- Retouch (Mac LP .re pattern) ---------- */
+.re{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:60px;align-items:start}
+.re .copy .bullets{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:12px}
+.re .copy .bullets li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--fg-2);line-height:1.7}
+.re .copy .bullets .m{color:var(--accent);flex-shrink:0;font-family:ui-monospace,monospace}
+.re.flip{grid-template-columns:1fr minmax(0,380px)}
+.re.flip .visual{order:2}
+.re.flip .copy{order:1}
+.deliver-block{margin-bottom:88px}
+.deliver-block:last-child{margin-bottom:0}
+
+/* ---------- iPad section ---------- */
+.ipad-wrap{display:flex;flex-direction:column;gap:28px}
+.ipad-sub{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.ipad-sub .pad{max-width:520px}
+.ipad-sub .copy p{margin-bottom:0}
+
+/* ---------- Privacy cards ---------- */
+.priv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.priv .card{background:var(--card);padding:26px 24px;display:flex;flex-direction:column;gap:6px}
+.priv .card .t{font-size:15px;font-weight:700;color:var(--fg)}
+.priv .card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.7}
+
+/* ---------- System reqs ---------- */
+.sys{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.sys-card{background:var(--card);padding:32px 32px}
+.sys-card h4{margin:0 0 16px;font-size:13px;color:var(--muted);font-family:ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.sys-card .row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sys-card .row:last-child{border-bottom:none}
+.sys-card .row .k{color:var(--muted);flex-shrink:0}
+.sys-card .row .v{color:var(--fg-2);font-family:ui-monospace,monospace;font-size:13px;font-variant-numeric:tabular-nums;text-align:right}
+
+/* ---------- Pricing ---------- */
+.pricing{display:grid;grid-template-columns:minmax(0,560px);justify-content:center;gap:30px;align-items:stretch}
+.price-card{background:var(--card);border:1px solid var(--line-2);border-radius:20px;padding:40px 40px 36px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden}
+.price-card.main{background:linear-gradient(180deg,#1b1e24 0%,#171a20 100%);border:1px solid rgba(87,168,255,.3)}
+.price-card.main::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad)}
+.price-card .tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-family:ui-monospace,monospace}
+.price-card h3{margin:0;font-size:22px;font-weight:700;letter-spacing:-.005em}
+.price-card .p{display:flex;align-items:baseline;gap:10px;margin:6px 0}
+.price-card .p .n{font-family:ui-monospace,monospace;font-size:52px;font-weight:600;color:var(--fg);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.price-card .p .suf{font-size:13px;color:var(--muted)}
+.price-card .inc{list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--fg-2)}
+.price-card .inc li{display:flex;gap:10px}
+.price-card .inc .m{color:#9fd0ff}
+.price-cta{margin-top:auto;padding-top:8px}
+.price-foot{font-size:12px;color:var(--muted-2);margin-top:14px;line-height:1.7}
+
+/* ---------- Mac cross-sell band ---------- */
+.mac-band{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:44px 44px;display:flex;align-items:center;gap:40px;flex-wrap:wrap;position:relative;overflow:hidden}
+.mac-band::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 120% at 90% 50%,rgba(164,123,255,.08),transparent 60%);pointer-events:none}
+.mac-band .copy{flex:1;min-width:280px;position:relative;z-index:1}
+.mac-band h3{margin:0 0 12px;font-size:26px;font-weight:700;letter-spacing:-.005em}
+.mac-band p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.8}
+.mac-band .btn{position:relative;z-index:1;flex-shrink:0}
+
+/* ---------- FAQ ---------- */
+.faq{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.faq-item{background:var(--card);padding:24px 30px}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;font-size:15.5px;font-weight:600}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";margin-left:auto;font-size:20px;color:var(--muted);font-weight:400}
+.faq-item[open] summary::after{content:"−"}
+.faq-item p{margin:14px 0 0;color:var(--muted);font-size:14.5px;line-height:1.8;padding-right:40px}
+
+/* ---------- CTA band ---------- */
+.cta{text-align:center;padding:140px 28px;border-top:1px solid var(--line);background:radial-gradient(80% 60% at 50% 0%,rgba(87,168,255,.07),transparent 70%)}
+.cta h2{font-size:52px;margin:0 0 24px;letter-spacing:-.012em;text-wrap:balance}
+.cta .sub{color:var(--muted);font-size:17px;margin:0 auto 42px;max-width:540px;line-height:1.8}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- Footer ---------- */
+footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e12}
+.foot{max-width:1180px;margin:0 auto;display:flex;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.foot .brand{font-size:15px}
+.foot .desc{color:var(--muted);font-size:13px;margin-top:10px;max-width:280px;line-height:1.7}
+.foot .cols{display:flex;gap:56px;margin-left:auto;flex-wrap:wrap}
+.foot .col{display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--muted)}
+.foot .col .h{color:var(--fg);font-weight:600;margin-bottom:4px}
+.foot .col a:hover{color:var(--fg)}
+.foot-bottom{max-width:1180px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted-2);flex-wrap:wrap;gap:8px}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  h1.display{font-size:48px}h2{font-size:32px}
+  .shot-demo,.re,.re.flip,.pricing,.ipad-sub{grid-template-columns:1fr;gap:40px}
+  .re.flip .visual{order:1}
+  .re.flip .copy{order:2}
+  .shot-demo .visual,.re .visual{max-width:380px;margin:0 auto;width:100%}
+  .hero{padding:56px 20px 40px}
+  section{padding:64px 0}
+  .flow{grid-template-columns:1fr 1fr}
+  .priv{grid-template-columns:1fr 1fr}
+  .sys{grid-template-columns:1fr 1fr}
+  .trio{grid-template-columns:repeat(3,1fr);gap:16px}
+  .hero-phones{gap:20px}
+  .hero-phones .phone{width:190px}
+  .hero-phones .phone.main{width:232px}
+}
+@media (max-width:640px){
+  .container{padding:0 16px}
+  .hero{padding:48px 16px 36px}
+  h1.display{font-size:36px;line-height:1.18}
+  h2{font-size:26px}
+  .lede,.section-lede{font-size:16px;line-height:1.85;max-width:none}
+  .lede br,.section-lede br{display:none}
+  section{padding:52px 0}
+  .section-head{margin-bottom:36px}
+  .nav-inner{padding:14px 16px;gap:12px}
+  .nav-links{display:none}
+  .nav-cta .meta{display:none}
+  .nav-cta .btn-primary{padding:9px 16px;font-size:13px}
+  .flow,.priv,.sys{grid-template-columns:1fr;gap:20px}
+  .eyebrow{font-size:11px}
+  .sub-meta{font-size:12px}
+  .price-card .p .n{font-size:48px}
+  .foot,.foot .cols{grid-template-columns:1fr;gap:32px}
+  /* Hero: keep only the main phone on small screens */
+  .hero-phones{margin-top:40px}
+  .hero-phones .phone.side{display:none}
+  .hero-phones .phone.main{width:min(260px,72vw)}
+  .trio{grid-template-columns:1fr;max-width:300px}
+  .mac-band{padding:32px 24px}
+  .cta h2{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" data-screen-label="nav">
+  <div class="nav-inner">
+    <a href="./" class="brand" aria-label="Postra"><img src="assets/logo-lockup-light.png" alt="Postra"></a>
+    <nav class="nav-links">
+      <a href="#features">特徴</a>
+      <a href="#ai">AI検索</a>
+      <a href="#compose">組む</a>
+      <a href="#deliver">届ける</a>
+      <a href="#pricing">価格</a>
+      <a href="#faq">FAQ</a>
+      <a href="./">Mac版</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="meta mono">v1.0 · iPhone &amp; iPad</span>
+      <a class="btn lang-toggle" href="?lang=en" hreflang="en" lang="en">English</a>
+      <a class="btn btn-primary" href="#pricing">近日発売</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero reveal" data-screen-label="01-hero">
+  <div class="hero-copy">
+    <div class="eyebrow">
+      <span class="pill"><span class="dot"></span>iPhone &amp; iPad</span>
+      <span>組写真 + AI フォトセレクト</span>
+    </div>
+    <h1 class="display">選ぶ、組む、仕上げる、<br><span class="accent">届ける。</span></h1>
+    <p class="lede" style="font-weight:700">カメラロールに眠る写真から、<strong>「あの1枚」と「この組み合わせ」</strong>を。<br>タグ付けは不要——「AI 索引」を一度実行すれば、<strong>AI が写真を理解</strong>します。<br>Postra Studio は、「写真再発見」をポケットに入れるアプリです。</p>
+  </div>
+
+  <div class="hero-phones" data-screen-label="hero-screenshot">
+    <div class="phone side"><img src="assets/ios/ip-search-sky.jpg" width="1000" height="2172" loading="lazy" alt="Postra Studio の AI 検索画面。「空」と入力すると、カメラロールから空の写真が並ぶ"></div>
+    <div class="phone main"><img src="assets/ios/ip-collage.jpg" width="1000" height="2172" loading="eager" alt="Postra Studio のメイン画面。上半分に花の写真4枚の組写真、下半分に写真ライブラリとシャッフル操作"></div>
+    <div class="phone side"><img src="assets/ios/ip-templates.jpg" width="1000" height="2172" loading="lazy" alt="デザインテンプレート一覧。斜め2枚を適用したキャンバスと、ポラロイド・散らし・フィルム系のテンプレートサムネイル"></div>
+  </div>
+
+  <div class="hero-actions">
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#pricing">近日発売</a>
+      <a class="btn" href="#features">できること →</a>
+    </div>
+    <div class="sub-meta">
+      <span class="mono check">✓ iOS 17+ · iPhone &amp; iPad</span>
+      <span class="sep"></span>
+      <span>¥800 買い切り・広告なし</span>
+      <span class="sep"></span>
+      <span>AI はすべて端末内</span>
+      <span class="sep"></span>
+      <span>写真は読み取り専用</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 01: Flow ============ -->
+<section id="features" class="reveal" data-screen-label="02-features">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">01 · 選ぶ → 組む → 仕上げる → 届ける</div>
+      <h2>カメラロールは、作品のたね箱。<br>ひとつの流れで、投稿の直前まで。</h2>
+      <p class="section-lede">「いつか見返そう」で溜まり続けるカメラロール。フォルダやアルバムの奥にも、まだ光っていない1枚が眠っています。<br>Postra Studio は、あなたの写真ライブラリから「選ぶ・組む・仕上げる・書き出す」をひとつの流れでこなす写真アプリです。</p>
+    </div>
+    <div class="flow">
+      <div class="step">
+        <span class="n">STEP 01</span>
+        <span class="t">選ぶ</span>
+        <p>最近・ランダム・AI 検索。「花」「空」のような言葉でも、1枚を長押しして「似た写真」でも。カメラ・レンズでの絞り込みも。</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 02</span>
+        <span class="t">組む</span>
+        <p>グリッド・フリー・デザインテンプレート 38種。SNS 比率プリセットで枠を決めたら、シャッフルで意外な組み合わせに出会う。</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 03</span>
+        <span class="t">仕上げる</span>
+        <p>プリセット一発の色補正から、明るさ・HSL・トーンカーブまで。調整のコピー &amp; ペースト、組全体のトーン合わせも。</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 04</span>
+        <span class="t">届ける</span>
+        <p>額装の帯に EXIF キャプション。「こう見える」プレビューで確認して、SNS 最適比率の高画質 JPEG で書き出し → 共有。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 02: AI Search ============ -->
+<section id="ai" class="reveal" data-screen-label="03-ai">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">02 · AI検索</div>
+      <h2>「空」と打てば、<br>空が出てくる。</h2>
+      <p class="section-lede">タグ付けは不要。AI 索引を済ませれば、探し方が一気に増えます。<br>索引は<strong>すべて端末内</strong>。アプリを閉じてもバックグラウンドで少しずつ進み、途中で止めても済んだ分は保存、残り時間の目安も表示します。</p>
+    </div>
+    <div class="shot-demo">
+      <div class="visual">
+        <div class="shot-tabs" role="tablist" data-stage="aiStage">
+          <button type="button" class="shot-tab is-active" data-shot="aiShot0" role="tab" aria-selected="true">言葉で探す</button>
+          <button type="button" class="shot-tab" data-shot="aiShot1" role="tab">似た写真</button>
+          <button type="button" class="shot-tab" data-shot="aiShot2" role="tab">絞り込み</button>
+        </div>
+        <div class="phone" id="aiStage">
+          <img id="aiShot0" src="assets/ios/ip-search-sky.jpg" width="1000" height="2172" loading="lazy" alt="AI テキスト検索。「空」と入力し、飛行機雲や見上げたビルなど空の写真がヒットして、3枚がレイアウトに配置済み">
+          <img id="aiShot1" src="assets/ios/ip-similar-flowers.jpg" width="1000" height="2172" loading="lazy" alt="写真を長押しして表示された「似た写真を探す」メニューと、花の写真が並ぶグリッド" hidden>
+          <img id="aiShot2" src="assets/ios/ip-filter-lens.jpg" width="1000" height="2172" loading="lazy" alt="レンズ絞り込みのポップオーバー。EXIF から自動集計された実際のレンズ名がリスト表示される" hidden>
+        </div>
+      </div>
+      <div class="copy">
+        <h3>タグ付けゼロで、<br>言葉からも、1枚からも。</h3>
+        <p>AI 索引を済ませれば、<strong>「花」「夕焼け」と日本語のまま</strong>意味で検索でき、気に入った1枚からは<strong>長押しひとつ</strong>で似たカットを集められます。</p>
+        <div class="feats">
+          <div class="feat">
+            <span class="k">KEYWORD</span>
+            <div><strong>言葉で探す</strong><span>「花」「空」「夜、街」——日本語のまま OK。写真頻出語の辞書と端末内翻訳で、タグの無い写真も意味でヒットします。</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">SIMILAR</span>
+            <div><strong>似た写真を探す</strong><span>写真を長押し →「似た写真を探す」。AI が見た目の近いカットを一瞬で集めます。追加ダウンロード不要。</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">AI SCORE</span>
+            <div><strong>AI スコア順に並べ替え</strong><span>AI の美的スコアで高い順・低い順にソート。ベストカット探しの当たりを付けられます（スコアは目安、最終判断はあなた）。</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">RANDOM</span>
+            <div><strong>シャッフルで再発見</strong><span>ライブラリからランダムに引き上げて配置。索引不要で最初から使え、忘れていた組み合わせを掘り起こします。</span></div>
+          </div>
+          <div class="feat">
+            <span class="k">FILTER</span>
+            <div><strong>カメラ・レンズで絞り込み</strong><span>EXIF から自動集計したカメラ・レンズと、縦横の向きで候補を絞り込み。撮影日や AI スコアで並べ替え。</span></div>
+          </div>
+        </div>
+        <div class="note"><span class="b">索引について:</span> AI 索引は端末内で実行され、アプリを閉じてもバックグラウンドで進みます。残り時間の目安を表示し、途中で停止しても済んだ分は保存。類似検索と AI スコアは追加ダウンロード不要、「言葉で検索」だけ初回に検索モデル（約146MB）をダウンロードします。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 03: Compose ============ -->
+<section id="compose" class="reveal" data-screen-label="04-compose">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">03 · 組む</div>
+      <h2>グリッド、フリー、デザイン。<br>38 のテンプレート。</h2>
+      <p class="section-lede">レイアウトは 3 モード——固定分割の<strong>グリッド</strong>、枠数自由の<strong>フリー</strong>、ポラロイド風・フィルム風・散らしなど <strong>38 種のデザインテンプレート</strong>。<br>枠ごとの比率変更や重なり順の調整もでき、シャッフルすれば意外な組み合わせに出会えます。<br>そして出力の縦横比は、余白や装飾を足しても<strong>絶対に崩れません</strong>。</p>
+    </div>
+    <div class="trio">
+      <figure>
+        <div class="phone"><img src="assets/ios/ip-collage.jpg" width="1000" height="2172" loading="lazy" alt="2×2 グリッドの組写真とライブラリ。花の写真4枚を配置し、シャッフルや絞り込みの操作が並ぶ"></div>
+        <figcaption><b>組む</b>ライブラリから選んで、即レイアウト。シャッフルで入れ替え。</figcaption>
+      </figure>
+      <figure>
+        <div class="phone"><img src="assets/ios/ip-templates.jpg" width="1000" height="2172" loading="lazy" alt="デザインテンプレート一覧。斜め2枚を適用したキャンバスと、ポラロイド・散らし・フィルム系のテンプレートサムネイル"></div>
+        <figcaption><b>デザインテンプレート</b>ポラロイド風・散らし・斜めの流れ。傾きや重なりまで含めて 38 種。</figcaption>
+      </figure>
+      <figure>
+        <div class="phone"><img src="assets/ios/ip-ratio.jpg" width="1000" height="2172" loading="lazy" alt="レイアウトタブ。X 2026 の比率プリセットとグリッド・フリー・デザインのモード切替、分割スライダー"></div>
+        <figcaption><b>SNS 比率プリセット</b>X・Instagram・Story など、出力比率は固定のまま自在に分割。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 04: Retouch ============ -->
+<section class="reveal" data-screen-label="05-retouch">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">04 · 仕上げる</div>
+      <h2>元の写真は触らない。<br>何度でも、やり直せる。</h2>
+      <p class="section-lede">写真ライブラリは読み取り専用——元データ（オリジナル）を変更も削除もしません。<br>だから安心して、枠ごとに攻めた色づくりができます。プレビューは書き出しと<strong>完全に同じ計算</strong>。画面の見たままが、そのまま出力されます。</p>
+    </div>
+    <div class="re">
+      <div class="visual">
+        <div class="phone"><img src="assets/ios/ip-retouch.jpg" width="1000" height="2172" loading="lazy" alt="レタッチ画面。調整前と調整後の比較サムネイルと、彩度・鮮やかさ・ハイライト・シャドウのスライダー"></div>
+      </div>
+      <div class="copy">
+        <h3>プリセット一発から、<br>トーンカーブまで。</h3>
+        <p>まずはプリセットを一発、<strong>適用量</strong>で好みに寄せる。追い込みたければ明るさ・コントラストから <strong>HSL 8色・トーンカーブ・粒子・周辺光量・かすみ除去</strong>まで。気に入った調整は自作プリセットとして保存できます。</p>
+        <ul class="bullets">
+          <li><span class="m">—</span><span><strong>調整前 / 調整後</strong>をワンタップで見比べながら追い込める。</span></li>
+          <li><span class="m">—</span><span>プリセット 7 種 + 自作プリセット保存。適用量スライダーで効きを調整。</span></li>
+          <li><span class="m">—</span><span>WB オート・スポイト、調整の<strong>コピー &amp; ペースト</strong>、取り消し / やり直し。</span></li>
+          <li><span class="m">—</span><span><strong>「トーンをなじませる」</strong>で、組写真全体の露出・色みをワンタップで統一。</span></li>
+          <li><span class="m">—</span><span>スライダーを全枠にまとめて適用する一括調整も。</span></li>
+          <li><span class="m">—</span><span>元の写真は読み取り専用。リセットすればいつでも撮って出しに戻せる。</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 05: Deliver ============ -->
+<section id="deliver" class="reveal" data-screen-label="06-deliver">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">05 · 届ける</div>
+      <h2>書き出す前に、<br>投稿後の姿まで確かめる。</h2>
+      <p class="section-lede">仕上げの一歩先まで——額装の帯で「プリントのような1枚」に整え、「こう見える」プレビューで投稿後の見え方を確認してから書き出せます。</p>
+    </div>
+
+    <div class="deliver-block">
+      <div class="re">
+        <div class="visual">
+          <div class="phone"><img src="assets/ios/ip-caption-band.jpg" width="1000" height="2172" loading="lazy" alt="額装の帯の設定画面。写真の下の帯に Postra Sample と FUJIFILM X-T5 · VOIGTLANDER ULTRON 27mm F2 のキャプションが表示されたプレビュー"></div>
+        </div>
+        <div class="copy">
+          <h3>額装の帯に、<br>撮影の記録を添えて。</h3>
+          <p>写真の下に「額装の帯」を敷いて、<strong>カメラ・レンズ・F値・撮影日</strong>などを EXIF から自動でキャプション表示。文字サイズや帯の高さ、境界線も調整できます。</p>
+          <ul class="bullets">
+            <li><span class="m">—</span><span>キャプションは EXIF から自動取得（無い写真は省略）。タイトルや署名も入れられる。</span></li>
+            <li><span class="m">—</span><span><strong>紙の質感</strong>と<strong>ドロップシャドウ</strong>で、プリント風の仕上げに。</span></li>
+            <li><span class="m">—</span><span>フィルムカメラ風の<strong>日付スタンプ</strong>。位置・色・サイズを指定可能。</span></li>
+            <li><span class="m">—</span><span>帯や余白を足しても、出力の縦横比は変わらない。</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="deliver-block">
+      <div class="shot-demo">
+        <div class="visual">
+          <div class="shot-tabs" role="tablist" data-stage="snsStage">
+            <button type="button" class="shot-tab is-active" data-shot="snsShot0" role="tab" aria-selected="true">X</button>
+            <button type="button" class="shot-tab" data-shot="snsShot1" role="tab">Instagram</button>
+            <button type="button" class="shot-tab" data-shot="snsShot2" role="tab">Story</button>
+          </div>
+          <div class="sheet" id="snsStage">
+            <img id="snsShot0" src="assets/ios/ip-sns-x.jpg" width="900" height="1190" loading="lazy" alt="「こう見える」プレビューの X タブ。街と建築の組写真4枚が X の公式グリッド風に表示される">
+            <img id="snsShot1" src="assets/ios/ip-sns-instagram.jpg" width="900" height="1190" loading="lazy" alt="「こう見える」プレビューの Instagram タブ。フィード投稿のモックに組写真が表示される" hidden>
+            <img id="snsShot2" src="assets/ios/ip-sns-story.jpg" width="900" height="1190" loading="lazy" alt="「こう見える」プレビューの Story タブ。9:16 の縦比率で組写真の切り取られ方を確認できる" hidden>
+          </div>
+        </div>
+        <div class="copy">
+          <h3>「こう見える」——<br>投稿前の答え合わせ。</h3>
+          <p>Instagram・X・Threads・ストーリーの<strong>投稿前プレビュー</strong>を搭載。X なら 2〜4 枚の公式グリッド風の自動レイアウトと、1枚ずつの横スワイプ表示——投稿後の見え方をアプリの中で確かめてから書き出せます。プレビューは書き出しと同じ計算で描画されるので、確認した姿がそのまま仕上がりです。</p>
+          <div class="feats">
+            <div class="feat">
+              <span class="k">EXPORT</span>
+              <div><strong>3つの書き出し方</strong><span>合成 1 枚 / カルーセル（連番の個別ファイル）/ 個別。用途に合わせて選べます。</span></div>
+            </div>
+            <div class="feat">
+              <span class="k">QUALITY</span>
+              <div><strong>高解像度 JPEG</strong><span>長辺は最大 3000px。SNS 最適比率のまま高画質で出力します。</span></div>
+            </div>
+            <div class="feat">
+              <span class="k">SHARE</span>
+              <div><strong>共有シートへ</strong><span>書き出したら共有シートから写真に保存・AirDrop・他アプリへ。書き出しの進捗はライブアクティビティでも確認できます。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 06: iPad ============ -->
+<section class="reveal" data-screen-label="07-ipad">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">06 · iPad</div>
+      <h2>iPhone で作って、<br>iPad でじっくり。</h2>
+      <p class="section-lede">iPad の横向きでは、盤面とパネルが横並びに。境界をドラッグして作業領域を自由に配分できます。<br>1 回の購入で、iPhone と iPad の両方で使えます。</p>
+    </div>
+    <div class="ipad-wrap">
+      <div class="pad"><img src="assets/ios/ipad-collage.jpg" width="2048" height="1536" loading="lazy" alt="iPad 横向きの 2 ペイン画面。左に白い台紙の花4枚の組写真、右に写真ライブラリのグリッド"></div>
+      <div class="ipad-sub">
+        <div class="pad"><img src="assets/ios/ipad-retouch.jpg" width="2048" height="1536" loading="lazy" alt="iPad 横向きのレタッチ画面。左にキャンバス、右に調整前後の比較とスライダー群のパネル"></div>
+        <div class="copy">
+          <p>広い画面では、キャンバスを眺めながらレタッチパネルを操作。<strong>調整前 / 調整後</strong>の比較もスライダーも、盤面の隣に開いたまま。移動中に iPhone で組んだ続きを、iPad で腰を据えて仕上げる——そんな使い分けができます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 07: Privacy ============ -->
+<section class="reveal" data-screen-label="08-privacy">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">07 · プライバシー</div>
+      <h2>写真は、<br>あなたの端末から出ません。</h2>
+      <p class="section-lede">解析・レイアウト・書き出しは端末内で完結。アカウント登録もありません。<br>通信が発生するのは、検索モデルの初回ダウンロードや iCloud 写真の取得など、機能に必要なダウンロードのときだけです。</p>
+    </div>
+    <div class="priv">
+      <div class="card">
+        <span class="t">AI 解析は端末内</span>
+        <p>索引・検索・スコアリングまで、AI の計算はすべて端末の中で実行します。</p>
+      </div>
+      <div class="card">
+        <span class="t">写真の外部送信なし</span>
+        <p>写真が外部サーバーにアップロードされることはありません。</p>
+      </div>
+      <div class="card">
+        <span class="t">アカウント・広告・トラッキングなし</span>
+        <p>登録不要。広告も解析 SDK もありません。</p>
+      </div>
+      <div class="card">
+        <span class="t">「データは収集されません」</span>
+        <p>App Store のプライバシー表示は「データは収集されません」です。</p>
+      </div>
+      <div class="card">
+        <span class="t">写真は読み取り専用</span>
+        <p>元データ（オリジナル）は変更も削除もしません。</p>
+      </div>
+      <div class="card">
+        <span class="t">索引キャッシュは消せる</span>
+        <p>バックアップ対象外なので iCloud 容量を使わず、いつでも削除・再作成できます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 08: System ============ -->
+<section class="reveal" data-screen-label="09-system">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">08 · 動作環境</div>
+      <h2>iPhone にも、iPad にも。</h2>
+      <p class="section-lede">iOS 17 以降の iPhone / iPad に対応。アプリ本体は約 38MB の軽量設計です。</p>
+    </div>
+    <div class="sys">
+      <div class="sys-card">
+        <h4>対応環境</h4>
+        <div class="row"><span class="k">OS</span><span class="v">iOS / iPadOS 17.0+</span></div>
+        <div class="row"><span class="k">デバイス</span><span class="v">iPhone · iPad（1 購入で両方）</span></div>
+        <div class="row"><span class="k">言語</span><span class="v">日本語 · 英語</span></div>
+        <div class="row"><span class="k">サイズ</span><span class="v">約 38MB（+ 任意の検索モデル 約 146MB）</span></div>
+      </div>
+      <div class="sys-card">
+        <h4>写真と書き出し</h4>
+        <div class="row"><span class="k">対象</span><span class="v">iOS の写真ライブラリ（iCloud 写真対応）</span></div>
+        <div class="row"><span class="k">絞り込み</span><span class="v">アルバム / フォルダ単位で選択可</span></div>
+        <div class="row"><span class="k">書き出し</span><span class="v">JPEG（長辺 1080〜3000px）</span></div>
+        <div class="row"><span class="k">元データ</span><span class="v">読み取り専用 · 変更しない</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 09: Pricing ============ -->
+<section id="pricing" class="reveal" data-screen-label="10-pricing">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">09 · 価格</div>
+      <h2>買い切り。サブスクではありません。</h2>
+      <p class="section-lede">App Store で近日発売予定です。アプリ内課金はありません。</p>
+    </div>
+    <div class="pricing">
+      <div class="price-card main">
+        <span class="tag">買い切り</span>
+        <h3>Postra Studio（iOS）</h3>
+        <div class="p"><span class="n">¥800</span><span class="suf">App Store</span></div>
+        <ul class="inc">
+          <li><span class="m">✓</span><span>全機能が使えます。追加課金なし</span></li>
+          <li><span class="m">✓</span><span>広告なし・トラッキングなし</span></li>
+          <li><span class="m">✓</span><span>iPhone と iPad の両方で使える</span></li>
+        </ul>
+        <div class="price-cta">
+          <span class="btn btn-primary" aria-disabled="true" style="width:100%;justify-content:center;padding:14px;opacity:.55;cursor:default">近日発売</span>
+        </div>
+        <div class="price-foot">支払い方法: Apple ID 決済（Apple Pay / クレジットカード ほか）<br>動作環境: iOS / iPadOS 17.0+<br>※ Mac 版は別アプリです</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 10: Mac cross-sell ============ -->
+<section class="reveal" data-screen-label="11-mac">
+  <div class="container">
+    <div class="mac-band">
+      <div class="copy">
+        <h3>Mac でも、Postra。</h3>
+        <p>フォルダを直接読み込むファイルベースで、RAW の簡易現像にも対応した Mac 版（Apple Silicon 専用）もあります。数万枚のライブラリを腰を据えてセレクトするなら、デスクトップで。レイアウトと色の計算エンジンは、iOS 版と一致するよう検証済みです。</p>
+      </div>
+      <a class="btn" href="./">Mac 版を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="reveal" data-screen-label="12-faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">よくある質問</div>
+      <h2>気になるところを、先に。</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item" open>
+        <summary>買い切りとサブスク、どちらですか？</summary>
+        <p>買い切りです。¥800 を一度支払えば全機能が使えます。アプリ内課金・広告はありません。</p>
+      </details>
+      <details class="faq-item">
+        <summary>写真が書き換えられたりしませんか？</summary>
+        <p>されません。写真ライブラリは<strong>読み取り専用</strong>で扱い、元データ（オリジナル）の変更も削除も一切行いません。レタッチはアプリ内の表示と書き出しにだけ反映され、何度でもやり直せます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>写真はクラウドに送られますか？</summary>
+        <p>送られません。AI 解析・検索・レタッチ・書き出しはすべて端末の中で完結し、写真が外部に送信されることはありません。通信が発生するのは、検索モデルの初回ダウンロードや、iCloud にのみある写真の取得など、機能に必要なダウンロードのときだけです。App Store のプライバシー表示も「データは収集されません」です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>AI 検索を使うには何が必要ですか？</summary>
+        <p>アプリ内の「AI 索引」を実行するだけです。索引は端末内で行われ、バックグラウンドでも少しずつ進みます。「言葉で検索」を使う場合のみ、初回に検索モデル（約146MB）をダウンロードします。類似検索や AI スコアは追加ダウンロード不要です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>日本語で検索できますか？</summary>
+        <p>できます。「花」「夕焼け」「夜、街」のように日本語のまま入力してください。写真でよく使われる語の辞書と端末内翻訳を組み合わせて、意味で検索します。</p>
+      </details>
+      <details class="faq-item">
+        <summary>iPad でも使えますか？</summary>
+        <p>使えます。1 回の購入で iPhone と iPad の両方にインストールできます。iPad の横向きでは盤面とパネルが横並びになり、境界をドラッグして作業領域を配分できます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>Mac 版との違いは何ですか？</summary>
+        <p>Mac 版はフォルダを直接読み込むファイルベースで、RAW の簡易現像に対応しています。iOS 版は iOS の写真ライブラリ（iCloud 写真を含む）を読み取り専用で扱います。レイアウトや色の計算エンジンは両者で一致するよう検証済みです。なお別アプリ・別購入となります（Mac 版は ¥2,500）。</p>
+      </details>
+      <details class="faq-item">
+        <summary>書き出しの形式は？</summary>
+        <p>JPEG です。長辺は 1080 / 1440 / 2048 / 2400 / 3000px から選べます。出し方は「合成 1 枚」「カルーセル（連番の個別ファイル）」「個別」の 3 通り。書き出し後は共有シートから写真に保存・AirDrop・他アプリへ渡せます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>AI 索引にはどれくらい時間がかかりますか？</summary>
+        <p>端末と枚数によります。アプリが直近の処理速度から残り時間の目安を表示するので、それを参考にしてください。アプリを閉じてもバックグラウンドで進み、途中で停止しても済んだ分は保存されます。アルバムやフォルダに対象を絞れば、短時間で使い始められます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>写真アクセスを「選択した写真のみ」にしていても使えますか？</summary>
+        <p>使えます。選択した写真の範囲でセレクトからレイアウト・書き出しまで動作します。アクセス範囲（すべて / 選択した写真）は iOS の「設定」からいつでも変更できます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta reveal" data-screen-label="13-cta">
+  <h2>ポケットの写真を、作品に。</h2>
+  <p class="sub">¥800 の買い切り、広告なし。iPhone と iPad の App Store で近日発売予定です。</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#pricing" style="padding:14px 26px">近日発売</a>
+    <a class="btn" href="#features">もう一度機能を見る</a>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer data-screen-label="14-footer">
+  <div class="foot">
+    <div>
+      <div class="brand"><img src="assets/logo-lockup-light.png" alt="Postra"></div>
+      <div class="desc" style="margin-top:14px">「写真再発見」をポケットに。iPhone / iPad の組写真 + AI フォトセレクトアプリ。</div>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <span class="h">プロダクト</span>
+        <a href="#features">特徴</a>
+        <a href="#ai">AI 検索</a>
+        <a href="#compose">組む</a>
+        <a href="#deliver">届ける</a>
+        <a href="#pricing">価格</a>
+        <a href="./">Mac 版</a>
+      </div>
+      <div class="col">
+        <span class="h">サポート</span>
+        <a href="#faq">FAQ</a>
+        <a href="contact.html">問い合わせ</a>
+        <a href="releases.html">リリースノート</a>
+      </div>
+      <div class="col">
+        <span class="h">会社</span>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Postra</span>
+    <span class="mono">v1.0 · iPhone &amp; iPad · App Store</span>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Tabbed screenshot swap (#ai / #deliver SNS preview).
+// All images stay in the DOM; tabs just toggle the hidden attribute so
+// already-loaded shots never re-decode or jump.
+(function(){
+  document.querySelectorAll('.shot-tabs').forEach(tabs=>{
+    const stage = document.getElementById(tabs.dataset.stage);
+    if (!stage) return;
+    const buttons = tabs.querySelectorAll('.shot-tab');
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const shot = document.getElementById(btn.dataset.shot);
+        if (!shot) return;
+        buttons.forEach(b=>{ b.classList.remove('is-active'); b.removeAttribute('aria-selected'); });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected','true');
+        stage.querySelectorAll('img').forEach(img=>{ img.hidden = (img !== shot); });
+      });
+    });
+  });
+})();
+</script>
+</body></html>

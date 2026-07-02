@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Postra — Find, pick, layout, refine, deliver.</title>
 <meta name="description" content="Postra is a photo curation and composite layout app for Mac (Apple Silicon). Surface the keeper from a library of tens of thousands.">
 
@@ -431,6 +432,16 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
   .eyebrow{font-size:11px}
   .sub-meta{font-size:12px}
   .price-card .p .n{font-size:48px}
+  /* Bench rows: the fixed 70px time column makes long JA strings like
+     "2時間16分" wrap mid-word — let the time size to its content and
+     give the bar whatever is left. */
+  .bench-row{grid-template-columns:70px 1fr auto}
+  /* Spec table: keep the row label ("メタデータ" etc.) on one line and
+     let the right-hand value wrap instead. */
+  .sys-card .row .k{flex-shrink:0}
+  /* The dashed AI note squeezed its bold lead-in into a one-character-
+     per-line sliver next to the body text — stack them vertically. */
+  .sys-note{flex-direction:column;align-items:flex-start;gap:8px}
   /* Footer columns stack instead of three side-by-side. */
   .foot,.foot .cols{grid-template-columns:1fr;gap:32px}
 }
@@ -449,6 +460,7 @@ footer{padding:56px 28px 64px;border-top:1px solid var(--line);background:#0c0e1
       <a href="tutorials.html">Guide</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
+      <a href="ios.html">iPhone app</a>
     </nav>
     <div class="nav-cta">
       <span class="meta mono">v1.2 · Mac (Apple Silicon)</span>
@@ -972,6 +984,7 @@ Postra is an app for finding the fun in there again.</p>
         <a href="#ai">AI search</a>
         <a href="#compose">Composites</a>
         <a href="#pricing">Pricing</a>
+        <a href="ios.html">iPhone / iPad app</a>
       </div>
       <div class="col">
         <span class="h">Support</span>

@@ -174,11 +174,10 @@ article strong{color:var(--fg);font-weight:600}
 (function(){
   const btn = document.getElementById('reveal-email');
   if (!btn) return;
-  // TODO: ドメイン取得後、下記の Base64 を本番メアドに差し替えてください。
-  // 生成方法: btoa('local-part') / btoa('domain.tld')
-  // 例: btoa('support') = 'c3VwcG9ydA==' / btoa('postra.app') = 'cG9zdHJhLmFwcA=='
-  const u = atob('e3vjg6Hjg7zjg6vntb7lk6F9fQ=='); // {{メール先頭}} placeholder
-  const d = atob('e3vjg4njg6HjgqTjg7N9fQ=='); // {{ドメイン}} placeholder
+  // 本番メアド = support@postra.link を Base64 隠蔽（bot 収集対策）。
+  // 差し替え方法: btoa('local-part') / btoa('domain.tld')
+  const u = atob('c3VwcG9ydA=='); // support
+  const d = atob('cG9zdHJhLmxpbms='); // postra.link
   let revealed = false;
   btn.addEventListener('click', () => {
     const mail = u + '@' + d;

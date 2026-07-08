@@ -177,11 +177,10 @@ article strong{color:var(--fg);font-weight:600}
 (function(){
   const btn = document.getElementById('reveal-email');
   if (!btn) return;
-  // TODO: After acquiring the domain, replace the Base64 below with the production mail address.
-  // How to generate: btoa('local-part') / btoa('domain.tld')
-  // Example: btoa('support') = 'c3VwcG9ydA==' / btoa('postra.app') = 'cG9zdHJhLmFwcA=='
-  const u = atob('e3vjg6Hjg7zjg6vntb7lk6F9fQ=='); // {{mail-local-part}} placeholder
-  const d = atob('e3vjg4njg6HjgqTjg7N9fQ=='); // {{mail-domain}} placeholder
+  // Production address = support@postra.link, Base64-obfuscated to deter bots.
+  // How to change: btoa('local-part') / btoa('domain.tld')
+  const u = atob('c3VwcG9ydA=='); // support
+  const d = atob('cG9zdHJhLmxpbms='); // postra.link
   let revealed = false;
   btn.addEventListener('click', () => {
     const mail = u + '@' + d;

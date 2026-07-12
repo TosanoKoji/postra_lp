@@ -46,6 +46,10 @@ h1{font-size:40px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:
 .release ul li{margin:4px 0}
 .release strong{color:var(--fg);font-weight:600}
 
+.platform{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 26px;padding-bottom:12px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;gap:11px}
+.platform::before{content:"";width:22px;height:3px;border-radius:3px;background:var(--grad)}
+.platform ~ .platform{margin-top:64px}
+
 .foot{max-width:880px;margin:0 auto;padding:24px 28px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);font-size:13px;color:var(--muted-2)}
 .foot a{color:var(--muted);border:none}
 .foot a:hover{color:var(--fg)}
@@ -73,6 +77,59 @@ h1{font-size:40px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:
 <main>
   <h1>Release Notes</h1>
   <p class="lede">Postra release history, with the most recent at the top.</p>
+
+  <h2 class="platform">iPhone / iPad</h2>
+
+  <section class="release">
+    <div class="release-head">
+      <h2 class="release-version">Postra 1.1.0</h2>
+      <span class="release-date">2026-07-11</span>
+      <span class="release-tag">Update</span>
+    </div>
+    <p class="release-summary">Straight from your set to your feed. Adds a true-to-size X carousel preview, new Carousel and Mosaic layouts, export format choice and RAW develop.</p>
+
+    <h3>New</h3>
+    <ul>
+      <li><strong>True-to-size X carousel preview</strong> — "Preview" now reproduces how an X carousel actually displays (landscape photos are center-cropped), so you can see the crop before you post.</li>
+      <li><strong>Carousel layout</strong> — build a portrait/landscape mix directly and reorder by dragging; optionally add a composite cover as the first image.</li>
+      <li><strong>Mosaic layout</strong> — a collage that packs each photo into a single image at its original ratio (portrait/landscape mix).</li>
+      <li><strong>Export format choice and RAW develop</strong> — pick PNG / HEIC / TIFF alongside JPEG, and re-develop RAW photos on device.</li>
+    </ul>
+
+    <h3>Improvements</h3>
+    <ul>
+      <li>Redesigned the retouch panel into <strong>two columns</strong> and kept the export button always visible. Improved how background color and favorites are remembered.</li>
+    </ul>
+  </section>
+
+  <section class="release">
+    <div class="release-head">
+      <h2 class="release-version">Postra 1.0.1</h2>
+      <span class="release-date">2026-07-02</span>
+      <span class="release-tag">First release</span>
+    </div>
+    <p class="release-summary">Postra is now available for iPhone and iPad. Pick, arrange, retouch and export from your camera roll in one flow — all on device.</p>
+
+    <h3>Main features</h3>
+    <ul>
+      <li><strong>Pick with AI</strong> — Recent / Random / AI text search (search by words like "flower" or "sky"), find similar photos from a single one, and filter by camera and lens.</li>
+      <li><strong>Build photo sets</strong> — free layouts with grid / free / design templates, aspect-ratio presets for Instagram, X, Threads and more, and a "Preview" of how it looks on each platform.</li>
+      <li><strong>Refine</strong> — from one-tap preset color grading to brightness, HSL, curves and cropping; copy and paste adjustments between photos.</li>
+      <li><strong>Finish and export</strong> — a caption band with EXIF (camera, lens, aperture, date), paper texture and drop shadows for a print-like finish, and high-quality export at each platform's ratio.</li>
+    </ul>
+
+    <h3>Privacy</h3>
+    <ul>
+      <li>Analysis, layout and export all happen on device. Your original photos are never modified. No account, no tracking, no ads. (Only AI text search downloads a search model, about 146 MB, once on first use.)</li>
+    </ul>
+
+    <h3>System requirements</h3>
+    <ul>
+      <li>iOS / iPadOS 17 or later. iPhone and iPad.</li>
+    </ul>
+  </section>
+
+  <h2 class="platform">Mac</h2>
 
   <section class="release">
     <div class="release-head">

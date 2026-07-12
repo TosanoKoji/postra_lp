@@ -43,6 +43,10 @@ h1{font-size:40px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:
 .release ul li{margin:4px 0}
 .release strong{color:var(--fg);font-weight:600}
 
+.platform{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 26px;padding-bottom:12px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;gap:11px}
+.platform::before{content:"";width:22px;height:3px;border-radius:3px;background:var(--grad)}
+.platform ~ .platform{margin-top:64px}
+
 .foot{max-width:880px;margin:0 auto;padding:24px 28px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);font-size:13px;color:var(--muted-2)}
 .foot a{color:var(--muted);border:none}
 .foot a:hover{color:var(--fg)}
@@ -70,6 +74,59 @@ h1{font-size:40px;line-height:1.22;letter-spacing:-.01em;font-weight:700;margin:
 <main>
   <h1>リリースノート</h1>
   <p class="lede">Postra の更新履歴です。新しいものから順に並んでいます。</p>
+
+  <h2 class="platform">iPhone / iPad 版</h2>
+
+  <section class="release">
+    <div class="release-head">
+      <h2 class="release-version">Postra 1.1.0</h2>
+      <span class="release-date">2026-07-11</span>
+      <span class="release-tag">アップデート</span>
+    </div>
+    <p class="release-summary">組写真を、そのまま投稿へ。X カルーセルの実寸プレビュー、カルーセル／モザイクの新しいレイアウト、出力フォーマットの選択と RAW 現像などを追加しました。</p>
+
+    <h3>新機能</h3>
+    <ul>
+      <li><strong>X カルーセル対応の「こう見える」</strong> — X 表示の縦横比（横写真は中央クロップ）を実測で再現。投稿前に、各 SNS での切れ方まで確認できます。</li>
+      <li><strong>カルーセル・レイアウト</strong> — 縦横ミックスの並びを直接組み、ドラッグで並べ替え。1 枚目に表紙（合成 1 枚）を付けることもできます。</li>
+      <li><strong>モザイク・レイアウト</strong> — 各写真を元の比率のまま 1 枚に詰めるコラージュ（縦横混在 OK）。</li>
+      <li><strong>出力フォーマット選択と RAW 現像</strong> — JPEG に加え PNG / HEIC / TIFF を選べ、RAW 写真は本体で再現像できます。</li>
+    </ul>
+
+    <h3>改善</h3>
+    <ul>
+      <li>レタッチ画面を <strong>2 列表示</strong> に刷新し、書き出しボタンを常時表示。背景色やお気に入りの記憶まわりも改善しました。</li>
+    </ul>
+  </section>
+
+  <section class="release">
+    <div class="release-head">
+      <h2 class="release-version">Postra 1.0.1</h2>
+      <span class="release-date">2026-07-02</span>
+      <span class="release-tag">初回リリース</span>
+    </div>
+    <p class="release-summary">Postra を iPhone / iPad 向けにリリースしました。カメラロールから「選ぶ・組む・仕上げる・書き出す」を一つの流れで。解析も書き出しも、すべて端末内で完結します。</p>
+
+    <h3>主な機能</h3>
+    <ul>
+      <li><strong>AI で、選ぶ</strong> — 最近／ランダム／AI テキスト検索（「花」「空」などの言葉で検索）。一枚から「似た写真」をまとめて表示し、カメラ・レンズで絞り込めます。</li>
+      <li><strong>組写真をつくる</strong> — グリッド／フリー／デザインテンプレートで自由なレイアウト。Instagram・X・Threads などの SNS 比率プリセットと「こう見える」プレビュー付き。</li>
+      <li><strong>整える</strong> — プリセット一発の色補正から、明るさ・HSL・カーブ・トリミングまで。調整を別の写真へコピー＆ペーストできます。</li>
+      <li><strong>仕上げて書き出す</strong> — 額装の帯に EXIF（カメラ・レンズ・絞り・撮影日）、紙の質感やドロップシャドウなどプリント風の仕上げ。各 SNS 比率で高画質書き出し。</li>
+    </ul>
+
+    <h3>プライバシー</h3>
+    <ul>
+      <li>写真の解析・レイアウト・書き出しは、すべて端末内で完結。写真の原本は変更しません。アカウント不要・トラッキングなし・広告なし。（AI テキスト検索を使うときのみ、検索用モデル 約 146MB を初回に一度だけダウンロードします。）</li>
+    </ul>
+
+    <h3>動作環境</h3>
+    <ul>
+      <li>iOS / iPadOS 17 以降。iPhone・iPad 対応。</li>
+    </ul>
+  </section>
+
+  <h2 class="platform">Mac 版</h2>
 
   <section class="release">
     <div class="release-head">

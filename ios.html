@@ -43,14 +43,18 @@ img[hidden]{display:none}
 
 /* ---------- Nav ---------- */
 .nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(140%) blur(14px);background:rgba(15,17,21,.72);border-bottom:1px solid var(--line)}
-.nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;gap:28px}
+.nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;gap:20px}
 .brand{display:flex;align-items:center;height:34px}
 .brand img{height:100%;width:auto;display:block;filter:drop-shadow(0 2px 10px rgba(138,110,255,.25))}
 .foot .brand{height:30px}
-.nav-links{display:flex;gap:24px;font-size:13.5px;color:var(--muted)}
+.nav-links{display:flex;gap:18px;font-size:13.5px;color:var(--muted);flex-wrap:nowrap}
+.nav-links a{white-space:nowrap}
+/* ナビが増えた分の段階的な退避: まず装飾メタを隠し、足りない幅ではリンク群を畳む */
+@media (max-width:1290px){.nav-cta .meta{display:none}}
+@media (max-width:1060px){.nav-links{display:none}}
 .nav-links a:hover{color:var(--fg)}
 .nav-cta{margin-left:auto;display:flex;align-items:center;gap:14px}
-.nav-cta .meta{font-size:12px;color:var(--muted-2)}
+.nav-cta .meta{font-size:12px;color:var(--muted-2);white-space:nowrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid var(--line-2);color:var(--fg);background:transparent;transition:background .15s,border-color .15s,opacity .15s}
 .btn:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.2)}
 .btn-primary{background:var(--grad);color:#0b0c10;border:none;padding:11px 22px}

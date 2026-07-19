@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's New Highlights — Postra</title>
+<meta name="description" content="Postra keeps evolving after release. Ratings, free-form frame editing, caption design, real-size SNS previews and more — see the new features on real screens.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Postra">
+<meta property="og:title" content="Postra — What's New Highlights">
+<meta property="og:description" content="The evolution didn't stop at launch. New features from every update, on real screens.">
+<meta property="og:url" content="https://postra.link/features.en.html">
+<meta property="og:image" content="https://postra.link/assets/og-image-ios-en.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ja" href="https://postra.link/features.html?lang=ja">
+<link rel="alternate" hreflang="en" href="https://postra.link/features.html?lang=en">
+<link rel="icon" type="image/png" href="assets/app-icon.png">
+<link rel="apple-touch-icon" href="assets/app-icon.png">
+<meta name="theme-color" content="#0f1115">
+<style>
+:root{
+  --bg:#0f1115;--panel:#1b1e24;--card:#1b1e24;
+  --line:rgba(255,255,255,.06);--line-2:rgba(255,255,255,.1);--line-3:rgba(255,255,255,.14);
+  --fg:#eef0f2;--fg-2:#c9cdd2;--muted:#9aa1aa;--muted-2:#6e747c;
+  --accent:#57a8ff;
+  --grad:linear-gradient(135deg,#35d4ff 0%,#57a8ff 35%,#a47bff 70%,#ff6ec4 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans",sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:#9fd0ff;text-decoration:none;border-bottom:1px solid rgba(159,208,255,.3)}
+a:hover{color:#cfe4ff;border-bottom-color:rgba(207,228,255,.6)}
+img{display:block;max-width:100%}
+
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(140%) blur(14px);background:rgba(15,17,21,.72);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;height:30px;border:none}
+.brand img{height:100%;width:auto;display:block}
+.nav-sub{font-size:13.5px;color:var(--muted);border:none}
+.nav-sub:hover{color:var(--fg)}
+.back-link{margin-left:auto;font-size:13.5px;color:var(--muted);border:none}
+.back-link:hover{color:var(--fg)}
+
+main{max-width:1080px;margin:0 auto;padding:76px 28px 100px}
+.eyebrow{font-size:11.5px;color:var(--muted-2);letter-spacing:.18em;text-transform:uppercase;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;margin:0 0 18px}
+.eyebrow::before{content:"— "}
+h1{font-size:46px;line-height:1.2;letter-spacing:-.012em;font-weight:700;margin:0 0 20px;color:var(--fg);text-wrap:balance}
+h1 .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:16.5px;color:var(--muted);margin:0 0 18px;max-width:760px}
+.lede strong{color:var(--fg-2);font-weight:600}
+.hero-links{font-size:13.5px;color:var(--muted-2);margin:0 0 72px}
+
+.platform{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;padding-bottom:12px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;gap:11px}
+.platform .plat-icon{width:19px;height:19px;flex:none;color:var(--accent)}
+.plat-note{font-size:13px;color:var(--muted-2);margin:0 0 44px}
+
+.feat{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:56px;align-items:center;padding:44px 0;border-bottom:1px solid var(--line)}
+.feat:last-of-type{border-bottom:none}
+.feat.flip{grid-template-columns:1fr minmax(0,340px)}
+.feat.flip .feat-visual{order:2}
+.feat-visual{display:flex;gap:18px;justify-content:center;align-items:flex-start}
+.shot{width:100%;max-width:340px;aspect-ratio:1206/2622;object-fit:cover;border-radius:30px;border:1px solid var(--line-3);background:#0b0d11;box-shadow:0 24px 70px rgba(0,0,0,.45),0 0 0 1px rgba(87,168,255,.05)}
+.feat.duo-card{grid-template-columns:minmax(0,520px) 1fr}
+.duo .shot{flex:1 1 0;width:auto;max-width:250px;min-width:0}
+.duo .shot+.shot{margin-top:44px}
+.vtag{display:inline-block;padding:3px 10px;border-radius:999px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#cfe4ff;background:rgba(87,168,255,.14);border:1px solid rgba(87,168,255,.3);margin-bottom:14px}
+.feat h2{font-size:30px;line-height:1.3;letter-spacing:-.008em;font-weight:700;margin:0 0 14px;color:var(--fg);text-wrap:balance}
+.feat p{margin:0;color:var(--fg-2);font-size:15.5px;max-width:560px}
+.feat p+p{margin-top:10px}
+.feat p strong{color:var(--fg);font-weight:600}
+
+.more{margin:56px 0 0;padding:32px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.more h3{font-size:14px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin:0 0 16px;font-family:ui-monospace,monospace}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:7px 14px;border-radius:999px;border:1px solid var(--line-2);color:var(--fg-2);font-size:13.5px;background:rgba(255,255,255,.02)}
+
+.mac-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.mac-card{padding:26px 26px 22px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.mac-card h2{font-size:19px;font-weight:700;margin:0 0 10px;color:var(--fg)}
+.mac-card p{margin:0;color:var(--fg-2);font-size:14.5px}
+.mac-card .vtag{margin-bottom:12px}
+
+.cta{margin-top:96px;padding:44px 36px;background:var(--card);border:1px solid var(--line);border-radius:20px;text-align:center}
+.cta h2{font-size:28px;font-weight:700;margin:0 0 10px;letter-spacing:-.008em}
+.cta p{margin:0 0 26px;color:var(--muted);font-size:15px}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;font-size:14.5px;font-weight:600;border:1px solid var(--line-2);color:var(--fg)}
+.btn:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.2);color:var(--fg)}
+.btn-primary{background:var(--grad);color:#0b0c10;border:none}
+.btn-primary:hover{opacity:.93;color:#0b0c10}
+
+.sec-gap{height:96px}
+
+.foot{max-width:1080px;margin:0 auto;padding:24px 28px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);font-size:13px;color:var(--muted-2)}
+.foot a{color:var(--muted);border:none}
+.foot a:hover{color:var(--fg)}
+
+@media (max-width:840px){
+  .nav-inner{padding:14px 16px}
+  main{padding:56px 16px 72px}
+  h1{font-size:32px}
+  .feat,.feat.flip{grid-template-columns:1fr;gap:30px;padding:36px 0}
+  .feat.flip .feat-visual{order:0}
+  .feat h2{font-size:24px}
+  .duo .shot+.shot{margin-top:28px}
+  .mac-grid{grid-template-columns:1fr}
+  .foot{padding:20px 16px 40px;flex-direction:column;gap:10px;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.en.html" class="brand" aria-label="Postra"><img src="assets/logo-lockup-light.png" alt="Postra"></a>
+    <a href="releases.en.html" class="nav-sub">Release Notes</a>
+    <a href="?lang=ja" class="back-link" hreflang="ja" lang="ja" style="margin-left:auto">日本語</a>
+    <a href="index.en.html" class="back-link" style="margin-left:0">← Back to Postra</a>
+  </div>
+</header>
+
+<main>
+  <p class="eyebrow">What's New</p>
+  <h1>The evolution didn't stop <span class="accent">at launch</span>.</h1>
+  <p class="lede">Postra keeps shipping. <strong>Six releases from 1.0 to 1.3 on iOS</strong> have grown the app far beyond day one. Here are the new features we most want you to try — shown on real screens.</p>
+  <p class="hero-links">Every change is recorded in the <a href="releases.en.html">release notes</a>.</p>
+
+  <h2 class="platform"><svg class="plat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.6"/><line x1="10.6" y1="18.4" x2="13.4" y2="18.4"/></svg>iPhone / iPad</h2>
+  <p class="plat-note">All images are actual app screens.</p>
+
+  <section class="feat duo-card">
+    <div class="feat-visual duo">
+      <img class="shot" src="assets/ios/feat-rating-palette.jpg" alt="Long-press star palette with pick, hold and reject menu" loading="lazy">
+      <img class="shot" src="assets/ios/feat-rating-panel.jpg" alt="Rate and Tag panel with stars, pick state and five color tags" loading="lazy">
+    </div>
+    <div>
+      <span class="vtag">New in v1.3</span>
+      <h2>Half a second of long-press, and culling is done.</h2>
+      <p>Long-press any thumbnail and a palette appears right there: <strong>1–5 stars, pick / hold / reject, and 5 color tags</strong>. The Rate &amp; Tag panel stays open as you tap, so you can keep rating photo after photo.</p>
+      <p>Filter instantly from the ☆ button, or use “Select multiple” to batch-apply and clear. Ratings live only on your device — <strong>nothing is ever written to your photo library</strong>.</p>
+    </div>
+  </section>
+
+  <section class="feat flip">
+    <div class="feat-visual">
+      <img class="shot" src="assets/ios/feat-filter-menu.jpg" alt="Filter menu with focal length, aperture, lens, camera, orientation, color tags, state and stars" loading="lazy">
+    </div>
+    <div>
+      <span class="vtag">Upgraded v1.1 → v1.3</span>
+      <h2>Aperture, lens, stars. The fastest route to the shot.</h2>
+      <p>Filter by focal length, aperture, lens, camera and orientation — and now by <strong>stars, pick state and color tags</strong> too. Sort by date taken, date edited, resolution, ISO or AI score. Even in a library of thousands, the photo you want is moments away.</p>
+    </div>
+  </section>
+
+  <section class="feat">
+    <div class="feat-visual">
+      <img class="shot" src="assets/ios/feat-free-edit.jpg" alt="Free-form size editing with a selected frame and drag handle" loading="lazy">
+    </div>
+    <div>
+      <span class="vtag">New in v1.2</span>
+      <h2>Leave the grid. Frames go free.</h2>
+      <p>With “Free size”, you edit each frame's <strong>position, size and ratio directly</strong>. Make one frame bigger, nudge another slightly off — shapes a grid could never give you, made with a fingertip. Edited shapes auto-save to their tab.</p>
+    </div>
+  </section>
+
+  <section class="feat flip">
+    <div class="feat-visual">
+      <img class="shot" src="assets/ios/feat-design-edit.jpg" alt="Design frame editing with move, rotation slider and z-order controls" loading="lazy">
+    </div>
+    <div>
+      <span class="vtag">New in v1.2</span>
+      <h2>Move it, tilt it, layer it.</h2>
+      <p>Design frames support <strong>moving, fixed-aspect resizing, rotation and z-order</strong> changes. Scattered-snapshot looks are yours to fine-tune, down to the last degree. Frequent tools live in a bar fixed to the bottom of the panel.</p>
+    </div>
+  </section>
+
+  <section class="feat">
+    <div class="feat-visual">
+      <img class="shot" src="assets/ios/feat-caption-style.jpg" alt="Caption style settings with five fonts, text size, alignment and color" loading="lazy">
+    </div>
+    <div>
+      <span class="vtag">Upgraded v1.2 → v1.3</span>
+      <h2>Style the title and shooting info, separately.</h2>
+      <p>The framing band's title and shooting info each get their own <strong>font, size, color, alignment and line spacing</strong>. Five typefaces are available — standard, Mincho, rounded gothic, typewriter and serif (Mincho and rounded gothic ship as bundled open-licensed fonts).</p>
+      <p>Long shooting-info lines wrap automatically, and exports match the preview <strong>line for line</strong>.</p>
+    </div>
+  </section>
+
+  <section class="feat flip">
+    <div class="feat-visual">
+      <img class="shot" src="assets/ios/feat-format.jpg" alt="Export format selector with JPEG, PNG, HEIC and TIFF" loading="lazy">
+    </div>
+    <div>
+      <span class="vtag">Upgraded v1.1 → v1.3</span>
+      <h2>Beyond JPEG. At full resolution.</h2>
+      <p>Export as <strong>PNG, HEIC or TIFF</strong> in addition to JPEG. The long-edge setting now includes “Original”, so individual and carousel exports keep <strong>the source resolution</strong> untouched. RAW photos can be re-developed right in the app.</p>
+    </div>
+  </section>
+
+  <section class="feat">
+    <div class="feat-visual">
+      <img class="shot" src="assets/ios/feat-sns-x-mock.jpg" alt="How-it-looks preview reproducing an X post at real proportions" loading="lazy">
+    </div>
+    <div>
+      <span class="vtag">Upgraded v1.1 → v1.2</span>
+      <h2>See the post before you post.</h2>
+      <p>“How it looks” mocks up Instagram, Threads, X and Story at <strong>real proportions</strong> — check exactly how your piece gets cropped in the timeline before publishing. X ratios are measured from the real thing, with a PC / phone toggle.</p>
+    </div>
+  </section>
+
+  <div class="more">
+    <h3>And more</h3>
+    <div class="chips">
+      <span class="chip">Carousel and mosaic layouts</span>
+      <span class="chip">All-in-one favorites (layout + finish + caption + output)</span>
+      <span class="chip">Per-photo matte</span>
+      <span class="chip">“Camera photos only” setting</span>
+      <span class="chip">Remembered scroll position</span>
+      <span class="chip">Indexing time estimate</span>
+      <span class="chip">Indexing progress on the Lock Screen</span>
+      <span class="chip">Frame styles and band position</span>
+    </div>
+  </div>
+
+  <div class="sec-gap"></div>
+
+  <h2 class="platform"><svg class="plat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><line x1="8" y1="20.5" x2="16" y2="20.5"/><line x1="12" y1="17" x2="12" y2="20.5"/></svg>Mac</h2>
+  <p class="plat-note">The Mac app also received a major update in v1.3.0 — print-like finishing and a big retouch expansion.</p>
+
+  <div class="mac-grid">
+    <div class="mac-card">
+      <span class="vtag">New in v1.3</span>
+      <h2>Print-style finishing</h2>
+      <p>Framing caption band, film-style date stamp, paper grain, drop shadows and frame styles. Export your photo sets like pieces on a gallery wall.</p>
+    </div>
+    <div class="mac-card">
+      <span class="vtag">New in v1.3</span>
+      <h2>Retouch expansion pack</h2>
+      <p>Vignette, grain, 8-band HSL, preset strength %, and “Harmonize tones” to unify color across a photo set. With before / after preview.</p>
+    </div>
+    <div class="mac-card">
+      <span class="vtag">New in v1.3</span>
+      <h2>38 design templates</h2>
+      <p>Apply a full design — placement and tilt included — in one click. What you see on screen is exactly what exports.</p>
+    </div>
+    <div class="mac-card">
+      <span class="vtag">New in v1.3</span>
+      <h2>Undo / Redo and export favorites</h2>
+      <p>Two undo histories, for placement and retouch. Save finish-and-look sets under a name and recall them in one click. Plus an absolute ratio lock.</p>
+    </div>
+    <div class="mac-card">
+      <span class="vtag">New in v1.3</span>
+      <h2>Search precision pack</h2>
+      <p>An 899-word Japanese dictionary and English synonym expansion sharpen natural-language search. Search and indexing show progress, with a time estimate for indexing.</p>
+    </div>
+    <div class="mac-card">
+      <span class="vtag">New in v1.3</span>
+      <h2>Export progress HUD</h2>
+      <p>Batch exports show percentage progress, and any failures are collected into a single report at the end. Safe to walk away.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Pay once. Updates are free.</h2>
+    <p>And the evolution continues. Full history in the release notes.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6786174619">Postra for iPhone / iPad $4.99</a>
+      <a class="btn" href="https://apps.apple.com/app/id6767819307">Postra for Mac</a>
+      <a class="btn" href="releases.en.html">Release Notes</a>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <span>© 2026 Postra</span>
+  <span><a href="index.en.html">Back to top</a> &nbsp;·&nbsp; <a href="releases.en.html">Release Notes</a> &nbsp;·&nbsp; <a href="contact.en.html">Contact</a></span>
+</footer>
+
+</body></html>

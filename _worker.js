@@ -19,6 +19,7 @@ const PAGE_MAP = {
   '/terms.html': 'terms',
   '/contact.html': 'contact',
   '/releases.html': 'releases',
+  '/features.html': 'features',
   '/tutorials.html': 'tutorials',
 };
 

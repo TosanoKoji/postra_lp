@@ -68,7 +68,7 @@ article strong{color:var(--fg);font-weight:600}
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="lede"><span class="updated">Last updated: 2026-05-03</span></p>
+  <p class="lede"><span class="updated">Last updated: 2026-08-05</span></p>
 
   <article>
     <h2>Article 1. Introduction</h2>
@@ -86,18 +86,19 @@ article strong{color:var(--fg);font-weight:600}
     <h2>Article 3. Cases Where Network Communication Occurs</h2>
     <p>The App operates offline by default, and only communicates with external servers in the following limited cases:</p>
     <ul>
-      <li><strong>AI model download on first launch:</strong> To enable similarity search (CLIP / DINOv2), the App downloads model files from a model-distribution server operated by Hugging Face. The information transmitted is limited to standard HTTP headers (IP address, User-Agent, etc.) associated with the file request; your photos are never transmitted.</li>
-      <li><strong>Update checks:</strong> The App may transmit the current version information to an update-check server we operate.</li>
-      <li><strong>Purchase verification:</strong> The App is sold through the Mac App Store. Purchase verification and license management are handled by Apple's Mac App Store / App Store systems; we do not operate a separate license server, and no photos or personal information are transmitted to a server we operate for this purpose.</li>
+      <li><strong>AI model retrieval on first launch:</strong> To enable similarity search (CLIP / DINOv2), the App retrieves AI model files. On the Mac version, files are downloaded from a model-distribution server operated by Hugging Face. On the Android version, files are retrieved via Google Play's own delivery mechanism (Play Asset Delivery), so no third-party server other than Google is contacted. In either case, the information transmitted is limited to standard communication metadata (IP address, User-Agent, etc.) associated with the file request; your photos are never transmitted.</li>
+      <li><strong>Update checks:</strong> The App may transmit the current version information to an update-check server we operate (on Android, Google Play itself handles update checks, so this communication does not occur).</li>
+      <li><strong>Purchase verification:</strong> The App is sold through the Mac App Store (Mac version) or Google Play (Android version). Purchase verification and license management are handled by Apple's Mac App Store / App Store systems, or by Google Play, respectively; we do not operate a separate license server, and no photos or personal information are transmitted to a server we operate for this purpose.</li>
     </ul>
     <p>In none of these communications are your photos or photo-related metadata transmitted.</p>
 
     <h2>Article 4. Information We Collect</h2>
     <p>In providing the Service, we may collect the following information:</p>
     <ul>
-      <li><strong>Payment information at purchase:</strong> Because the App is sold through the Mac App Store, purchase processing and payment-information handling are performed by Apple Inc. (or, for customers in Japan, iTunes K.K.). <strong>We do not directly collect or retain</strong> your name, email address, credit card information, billing address, or similar details. From Apple, we receive only aggregated reports such as sales counts by region.</li>
+      <li><strong>Payment information at purchase:</strong> Because the App is sold through the Mac App Store (Mac version) or Google Play (Android version), purchase processing and payment-information handling are performed by Apple Inc. (or, for customers in Japan, iTunes K.K.) or Google LLC, respectively. <strong>We do not directly collect or retain</strong> your name, email address, credit card information, billing address, or similar details. From Apple and Google, we receive only aggregated reports such as sales counts by region.</li>
       <li><strong>Website access information:</strong> As logs from hosting / CDN services such as Cloudflare, we may record IP address, User-Agent, referrer URL, access timestamps, and similar.</li>
       <li><strong>Information from inquiries:</strong> If you contact us via an inquiry form or email, the body of the message, your name, email address, attachments, and similar.</li>
+      <li><strong>Android crash/diagnostic information:</strong> Via Google Play's Android Vitals, we may receive anonymized crash logs, ANR (not-responding) reports, and aggregated device-model information through Google. This does not include your photos or personally identifying information.</li>
     </ul>
 
     <h2>Article 5. Purpose of Use</h2>
@@ -114,8 +115,9 @@ article strong{color:var(--fg);font-weight:600}
     <p>Except as required by law, we do not provide the personal information we collect to third parties without the user's consent. However, in providing the Service, the following operators handle information in their respective roles:</p>
     <ul>
       <li>App sales, payment processing, and distribution: Apple Inc. (United States) / for customers in Japan, iTunes K.K. (via the Mac App Store)</li>
+      <li>Android app sales, payment processing, and distribution: Google LLC (United States, via Google Play)</li>
       <li>Website hosting and CDN: Cloudflare, Inc. (United States)</li>
-      <li>AI model distribution: Hugging Face, Inc. (United States)</li>
+      <li>AI model distribution: Hugging Face, Inc. (United States, Mac version) / Google LLC (United States, Android version via Play Asset Delivery)</li>
     </ul>
     <p>The privacy policies of those operators apply to their respective handling of information.</p>
 

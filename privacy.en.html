@@ -68,7 +68,7 @@ article strong{color:var(--fg);font-weight:600}
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="lede"><span class="updated">Last updated: 2026-08-05</span></p>
+  <p class="lede"><span class="updated">Last updated: 2026-08-19</span></p>
 
   <article>
     <h2>Article 1. Introduction</h2>
@@ -83,7 +83,7 @@ article strong{color:var(--fg);font-weight:600}
     </ul>
     <p>All such processing runs locally on your device, and the App is not designed to transmit this data externally.</p>
 
-    <h2>Article 3. Cases Where Network Communication Occurs</h2>
+    <h2 id="network">Article 3. Cases Where Network Communication Occurs</h2>
     <p>The App operates offline by default, and only communicates with external servers in the following limited cases:</p>
     <ul>
       <li><strong>AI model retrieval on first launch:</strong> To enable similarity search (CLIP / DINOv2), the App retrieves AI model files. On the Mac version, files are downloaded from a model-distribution server operated by Hugging Face. On the Android version, files are retrieved via Google Play's own delivery mechanism (Play Asset Delivery), so no third-party server other than Google is contacted. In either case, the information transmitted is limited to standard communication metadata (IP address, User-Agent, etc.) associated with the file request; your photos are never transmitted.</li>
@@ -91,6 +91,18 @@ article strong{color:var(--fg);font-weight:600}
       <li><strong>Purchase verification:</strong> The App is sold through the Mac App Store (Mac version) or Google Play (Android version). Purchase verification and license management are handled by Apple's Mac App Store / App Store systems, or by Google Play, respectively; we do not operate a separate license server, and no photos or personal information are transmitted to a server we operate for this purpose.</li>
     </ul>
     <p>In none of these communications are your photos or photo-related metadata transmitted.</p>
+
+    <h3>Photo retrieval and mobile data use (iPhone / iPad version)</h3>
+    <p>The App treats your photo library as <strong>read-only</strong> and never sends your photos anywhere. However, when working with photos stored only in iCloud (photos whose original is not on the device because of "Optimize iPhone Storage"), iOS may use data to retrieve those photos from your own iCloud. This is <strong>your photos arriving on your device from your iCloud, through Apple's system</strong>—no photos are sent to us or any third party. Data is used in the following cases, with rough amounts:</p>
+    <ul>
+      <li><strong>Photos whose original is on the device:</strong> no communication. Browsing, the board, and export all complete on-device.</li>
+      <li><strong>Browsing (thumbnails):</strong> even for iCloud-only photos, small display thumbnails are fetched. These are roughly tens to a few hundred KB each and are <strong>fetched over cellular too</strong>, so the library stays usable.</li>
+      <li><strong>AI indexing and search:</strong> these use only the versions already on the device and <strong>never download originals</strong>. Indexing and search themselves cause no communication. To index photos with nothing on the device, data is used only if you choose "Fetch from iCloud," and on cellular you are asked first.</li>
+      <li><strong>Export and RAW development:</strong> high-quality export and RAW development need the original. If the original is not on the device, it is fetched <strong>over Wi-Fi only by default</strong>; on cellular you are asked whether to fetch it. Ordinary photos use a small search-size version of around tens of KB, while cases that need the original (such as RAW) can be tens of MB per photo.</li>
+      <li><strong>Keyword-search AI model:</strong> when you use keyword search, the search model (about 146MB) is downloaded once. By default it is fetched over Wi-Fi only.</li>
+      <li><strong>App and updates:</strong> downloading and updating the App from the App Store uses data like any other app.</li>
+    </ul>
+    <p>The data-heavy actions—fetching originals and downloading the AI model—are performed <strong>over Wi-Fi only by default</strong>. You can change whether these also run over cellular at any time in the App under <strong>Settings &gt; Photos</strong>.</p>
 
     <h2>Article 4. Information We Collect</h2>
     <p>In providing the Service, we may collect the following information:</p>

@@ -86,7 +86,7 @@ article strong{color:var(--fg);font-weight:600}
     <h2 id="network">Article 3. Cases Where Network Communication Occurs</h2>
     <p>The App operates offline by default, and only communicates with external servers in the following limited cases:</p>
     <ul>
-      <li><strong>AI model retrieval on first launch:</strong> To enable similarity search (CLIP / DINOv2), the App retrieves AI model files. On the Mac version, files are downloaded from a model-distribution server operated by Hugging Face. On the Android version, files are retrieved via Google Play's own delivery mechanism (Play Asset Delivery), so no third-party server other than Google is contacted. In either case, the information transmitted is limited to standard communication metadata (IP address, User-Agent, etc.) associated with the file request; your photos are never transmitted.</li>
+      <li><strong>AI model retrieval:</strong> To enable search (CLIP for keyword search, DINOv2 for similarity search, etc.), the App retrieves AI model files. On the iPhone / iPad and Mac versions, files are downloaded from a model-distribution server operated by Hugging Face (on iPhone / iPad, the model is downloaded once when you first use keyword search, over Wi-Fi only by default). On the Android version, files are retrieved via Google Play's own delivery mechanism (Play Asset Delivery), so no third-party server other than Google is contacted. In either case, the information transmitted is limited to standard communication metadata (IP address, User-Agent, etc.) associated with the file request; your photos are never transmitted.</li>
       <li><strong>Update checks:</strong> The App may transmit the current version information to an update-check server we operate (on Android, Google Play itself handles update checks, so this communication does not occur).</li>
       <li><strong>Purchase verification:</strong> The App is sold through the Mac App Store (Mac version) or Google Play (Android version). Purchase verification and license management are handled by Apple's Mac App Store / App Store systems, or by Google Play, respectively; we do not operate a separate license server, and no photos or personal information are transmitted to a server we operate for this purpose.</li>
     </ul>
@@ -129,7 +129,7 @@ article strong{color:var(--fg);font-weight:600}
       <li>App sales, payment processing, and distribution: Apple Inc. (United States) / for customers in Japan, iTunes K.K. (via the Mac App Store)</li>
       <li>Android app sales, payment processing, and distribution: Google LLC (United States, via Google Play)</li>
       <li>Website hosting and CDN: Cloudflare, Inc. (United States)</li>
-      <li>AI model distribution: Hugging Face, Inc. (United States, Mac version) / Google LLC (United States, Android version via Play Asset Delivery)</li>
+      <li>AI model distribution: Hugging Face, Inc. (United States, iPhone / iPad and Mac versions) / Google LLC (United States, Android version via Play Asset Delivery)</li>
     </ul>
     <p>The privacy policies of those operators apply to their respective handling of information.</p>
 

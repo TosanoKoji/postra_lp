@@ -83,7 +83,7 @@ article strong{color:var(--fg);font-weight:600}
     <h2 id="network">第3条 ネットワーク通信が発生する場面</h2>
     <p>本アプリは原則オフラインで動作しますが、以下の限られた場合にのみ外部のサーバーと通信します。</p>
     <ul>
-      <li><strong>初回起動時のAIモデル取得:</strong> 類似検索機能（CLIP / DINOv2）を有効化するため、AIモデルファイルを取得します。Mac版は HuggingFace 社が運営するモデル配信サーバーから取得します。Android版は Google Play の配信機能（Play Asset Delivery）を通じて取得するため、Google 以外の第三者サーバーへは通信しません。いずれの場合も送信される情報はファイル取得リクエストに伴う一般的な通信情報（IPアドレス、User-Agent等）のみで、ユーザーの写真は一切送信されません。</li>
+      <li><strong>AIモデルの取得:</strong> 検索機能（キーワード検索の CLIP・類似検索の DINOv2 など）を有効化するため、AIモデルファイルを取得します。iPhone / iPad 版・Mac 版は HuggingFace 社が運営するモデル配信サーバーから取得します（iPhone / iPad 版はキーワード検索を使うときに一度だけ取得し、既定では Wi-Fi 接続時のみ）。Android版は Google Play の配信機能（Play Asset Delivery）を通じて取得するため、Google 以外の第三者サーバーへは通信しません。いずれの場合も送信される情報はファイル取得リクエストに伴う一般的な通信情報（IPアドレス、User-Agent等）のみで、ユーザーの写真は一切送信されません。</li>
       <li><strong>アップデート確認:</strong> 当方が運営するアップデート確認サーバーへ、現在のバージョン情報を送信する場合があります（Android版は Google Play が自動更新の確認を行うため、この通信は発生しません）。</li>
       <li><strong>購入確認:</strong> 本アプリは Mac版は Mac App Store、Android版は Google Play を通じて販売されます。購入確認・ライセンス管理はそれぞれ Apple のMac App Store / App Store システム、または Google Play システムが行い、当方独自のライセンスサーバーへ写真や個人情報を送信することはありません。</li>
     </ul>
@@ -126,7 +126,7 @@ article strong{color:var(--fg);font-weight:600}
       <li>本アプリの販売・決済処理・配信: Apple Inc.（米国）／日本国内のお客様の場合は iTunes K.K.（Mac App Store 経由）</li>
       <li>Android版の販売・決済処理・配信: Google LLC（米国、Google Play 経由）</li>
       <li>本ウェブサイトのホスティング・CDN: Cloudflare, Inc.（米国）</li>
-      <li>AI モデルの配信: Hugging Face, Inc.（米国、Mac版）／Google LLC（米国、Android版・Play Asset Delivery）</li>
+      <li>AI モデルの配信: Hugging Face, Inc.（米国、iPhone / iPad 版・Mac 版）／Google LLC（米国、Android版・Play Asset Delivery）</li>
     </ul>
     <p>これらの事業者には、それぞれが定めるプライバシーポリシーが適用されます。</p>
 
